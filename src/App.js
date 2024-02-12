@@ -25,8 +25,8 @@ function App() {
             <img src={logo} id="logo" alt="Logo vélomobile - retour accueil" />
           </Link>
         </div>
-        <nav>
-          <ul className="mt-4">
+        <nav className='container'>
+          <ul className="container d-flex justify-content-around my-2 mb-5">
             <li>
               <Link to={"/"}>Accueil</Link>
             </li>
@@ -34,18 +34,18 @@ function App() {
               <Link to={`/products`}>Produits</Link>
             </li>
             <li>
-              <Link to={`/histoire`}>Un peu d'histoire</Link>
+              <Link to={`/histoire`}>Histoire</Link>
+            </li>
+            <li>
+              <Link to={`/presentation`}>made in Lozère</Link>
             </li>
             <li>
               <Link to={`/Showroom`}>Showroom</Link>
             </li>
-            <li>
-              <Link to={`/presentation`}>Présentation</Link>
-            </li>
           </ul>
         </nav>
 
-        <h1>Vélomobile : l'alternative à la voiture</h1>
+        <h1>La meilleure alternative à la voiture !</h1>
       </header>
 
       <main>
@@ -55,8 +55,8 @@ function App() {
 
       </main>
 
-       <footer>
-        <Footer/>
+      <footer>
+        <Footer />
       </footer>
     </div>
   );
