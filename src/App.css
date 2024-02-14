@@ -47,7 +47,7 @@ max-width:80vw;
   max-width: 50%;
 }
 
-@media(max-width:650px){
+/* @media(max-width:650px){ */
   footer{
     display:block;
   }
@@ -83,5 +83,5 @@ footer {
 }
 
 
-}
+/* } */
  

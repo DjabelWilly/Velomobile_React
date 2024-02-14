@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import FormContact from './components/FormContact';
 // import { Button } from 'bootstrap';
 import Button from './components/Button';
-
+import Header from './components/Header';
 
 /**
  * Gère l'affichage du composant App
@@ -25,35 +25,7 @@ function App()
 
 return (
   <div className="App">
-    <header>
-      <div className="wrap-nav">
-        <Link to={"/"}>
-          <img src={logo} id="logo" alt="Logo vélomobile - retour accueil" />
-        </Link>
-      </div>
-      <nav className='container'>
-        <ul className="row justify-content-around my-2 mb-5">
-          <li className="col">
-            <Link to={"/"}>Accueil</Link>
-          </li>
-          <li className="col">
-            <Link to={`/products`}>Produits</Link>
-          </li>
-          <li className="col">
-            <Link to={`/histoire`}>Histoire</Link>
-          </li>
-          <li className="col">
-            <Link to={`/presentation`}>made in Lozère</Link>
-          </li>
-          <li className="col">
-            <Link to={`/Showroom`}>Showroom</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <h1>La meilleure alternative à la voiture !</h1>
-    </header>
-
+      <Header isLoggedIn={isLoggedIn} />
     <main>
       <Outlet context={[isLoggedIn, setIsLoggedIn]} />
       <FormContact />

@@ -1,26 +1,122 @@
 /* Code imbriqué (nested) */
 header {
   nav {
+    
     ul {
       list-style: none;
       display: flex;
+      
       gap: 20px;
-      justify-content: center;
+      justify-content: center;;
 
-      li {
-        &:hover {
-          a {
-            cursor: pointer;
-            color: #d50202;
-          }
+      /* Les svg pour la connexion/déconnexion */
+      li.login-out-link {
+        svg {
+          color: black;
+          font-size: 1.0em;
         }
+
+        // &:hover {
+        //   svg {
+        //     color: $primary;
+        //   }
+        // }
       }
-     
-      a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.3em;
-      }
+
+      // a {
+      //   @include button($fc: #000583);
+
+      // }
     }
   }
+}
+
+header{
+  div.wrap-nav{
+    background-color: #D9D9D9;
+    padding: 40px;
+    img{
+      width: 50%;
+      
+    }
+  }
+}
+
+// Affichage Menu Burger
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI";
+}
+li {
+  list-style: none;
+  
+}
+a,a:visited {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: white;
+}
+
+/**** NAVBAR ****/
+nav {
+  background: rgb(251, 252, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: calc(0.2rem + 1.5vw);
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+#icons {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 650px) {
+  #icons {
+    display: block;
+  }
+  #icons:before {
+    content: "\2630";
+
+  }
+  .active #icons:before {
+    content: "\2715";
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    height: 50%;
+    left: 100%;
+    top: 16%;    
+    background: #D9D9D9;
+    width: 100%;
+    text-align: center;
+    transition: 1.25s;
+    
+  }
+  nav li {
+    padding: 10px 0;
+    border: none;
+    
+  }
+  nav li:hover {
+    background: rgb(242, 58, 2);
+  }
+  nav.active ul {
+    left: 0;
+  }
+  a{
+    font-size: 10px;
+  }
+  
 }
