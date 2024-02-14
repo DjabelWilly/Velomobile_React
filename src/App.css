@@ -7,6 +7,10 @@ li {
   text-decoration: none;
 }
 
+#vm1{
+max-width:80vw;
+}
+
 .App-logo {
   height: 10vmin;
   pointer-events: none;
@@ -32,7 +36,6 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -44,10 +47,16 @@ li {
   max-width: 50%;
 }
 
+@media(max-width:650px){
+  footer{
+    display:block;
+  }
+
+
 footer {
   background-color: #d9d9d9;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-around;
 }
 
@@ -72,3 +81,7 @@ footer {
   margin-right: 1em;
   font-size: 1.3em;
 }
+
+
+}
+ 

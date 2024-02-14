@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <>
+    <footer className="container-md">
       <ul className="footer-left">
         <li>Acueil</li>
         <li>Produits</li>
@@ -50,7 +50,7 @@ const Footer = () => {
           </svg>
         </li>
       </ul>
-    </>
+    </footer>
   );
 };
 
