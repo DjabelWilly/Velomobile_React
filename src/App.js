@@ -1,7 +1,7 @@
 import './App.css';
 import { Outlet} from "react-router-dom";
 import { useState } from 'react';
-import './sass/header.scss'
+// import './sass/header.scss'
 import Footer from './components/Footer';
 import FormContact from './components/FormContact';
 // import { Button } from 'bootstrap';
