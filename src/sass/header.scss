@@ -7,26 +7,28 @@ header {
       display: flex;
       
       gap: 20px;
-      justify-content: center;;
+      justify-content: space-around;;
 
       /* Les svg pour la connexion/déconnexion */
-      li.login-out-link {
-        svg {
-          color: black;
-          font-size: 1.0em;
-        }
+      // li.login-out-link {
+      //   svg {
+      //     color: black;
+      //     font-size: 1.0em;
+      //   }
 
-        // &:hover {
-        //   svg {
-        //     color: $primary;
-        //   }
-        // }
-      }
-
-      // a {
-      //   @include button($fc: #000583);
-
+      //   &:hover {
+      //     svg {
+      //       color: $primary;
+      //     }
+      //   }
       // }
+
+      a:hover {
+        // @include button($fc: #000583);
+         
+           color: rgb(233, 7, 7);
+        
+      }
     }
   }
 }
@@ -34,10 +36,19 @@ header {
 header{
   div.wrap-nav{
     background-color: #D9D9D9;
-    padding: 40px;
+    display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+    // padding: 25px;
     img{
-      width: 50%;
       
+    
+      min-width: 40%;
+      max-width: 80%;
+      min-height: 10%;   
+      max-height: 25%;   
     }
   }
 }
@@ -53,12 +64,12 @@ li {
   
 }
 a,a:visited {
-  color: black;
+  color: #000583;
   text-decoration: none;
   text-transform: uppercase;
 }
 a:hover {
-  color: white;
+  color: rgb(233, 7, 7);
 }
 
 /**** NAVBAR ****/
@@ -92,10 +103,11 @@ nav ul {
     content: "\2715";
   }
   nav ul {
+
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    height: 50%;
+    height: 100vh;
     left: 100%;
     top: 16%;    
     background: #D9D9D9;
@@ -107,16 +119,18 @@ nav ul {
   nav li {
     padding: 10px 0;
     border: none;
+    gap: 5px;
     
   }
   nav li:hover {
-    background: rgb(242, 58, 2);
+    background: rgb(255, 255, 255);
   }
   nav.active ul {
     left: 0;
   }
   a{
     font-size: 10px;
+    color: rgb(233, 7, 7); 
   }
-  
+
 }

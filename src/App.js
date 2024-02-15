@@ -2,7 +2,7 @@ import './App.css';
 import { Outlet, Link} from "react-router-dom";
 import logo from './assets/logovelomobile.png';
 import { useState } from 'react';
-import './sass/header.scss'
+// import './sass/header.scss'
 import Footer from './components/Footer';
 import FormContact from './components/FormContact';
 // import { Button } from 'bootstrap';
