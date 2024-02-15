@@ -29,7 +29,7 @@ export default class RemoteData {
       })
       .then((response) => {
         console.log(`response.status`, response.status);
-        if (response.status == 200) {
+        if (response.status === 200) {
           return response.json();
         } else throw new Error("Problème de serveur dans deleteVeloMobile. Statut de l'erreur : " + response.status)
       })
