@@ -12,6 +12,7 @@ const FormContact = () => {
         <input type="text" id="firstname" />
         <label htmlFor="textarea">Votre message</label>
         <textarea id="message" name="" rows="6"></textarea>
+        <button className= "form-button btn btn-primary" typre="submit">Envoyer</button>
        
       </form>
     </div>
