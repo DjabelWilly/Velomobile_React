@@ -46,9 +46,11 @@ const ProductsPage = () => {
   return (
     <>
       <h2>Produits</h2>
+      {isLoggedIn ? <p>Connecté</p> : <p>Déconnecté</p>}
       {errorMsg}
       {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
-      {velosMobiles && velosMobiles.map((veloMobile) => <VeloMobile veloMobile={veloMobile} />)}
+      {velosMobiles && velosMobiles.map((veloMobile) => 
+      <VeloMobile veloMobile={veloMobile} handleClickDeleteVeloMobile={handleClickDeleteVeloMobile} />)}
     </>
   );
 }
