@@ -7,7 +7,7 @@ header {
       display: flex;
       
       gap: 20px;
-      justify-content: center;;
+      justify-content: center;
 
       /* Les svg pour la connexion/déconnexion */
       li.login-out-link {
@@ -55,7 +55,7 @@ li {
 a,a:visited {
   color: black;
   text-decoration: none;
-  text-transform: uppercase;
+
 }
 a:hover {
   color: white;

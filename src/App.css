@@ -7,8 +7,8 @@ li {
   text-decoration: none;
 }
 
-#vm1{
-max-width:80vw;
+#vm1 {
+  max-width: 80vw;
 }
 
 .App-logo {
@@ -20,7 +20,6 @@ max-width:80vw;
   width: 100%;
   background-color: #d9d9d9;
   height: 6em;
-  
 }
 #logo {
   width: 27em;
@@ -47,41 +46,60 @@ max-width:80vw;
   max-width: 50%;
 }
 
-/* @media(max-width:650px){ */
-  footer{
-    display:block;
+@media (max-width: 650px) {
+  .footer-main {
+    flex-direction: column;
   }
+}
 
-
-footer {
-  background-color: #d9d9d9;
+.footer-main {
+  background-color: #d9d9d9 !important;
   display: flex;
-  /* flex-direction: row; */
+  width: 100vw;
   justify-content: space-around;
+  align-items: center;
+ 
 }
 
 .footer-left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 1em;
+  align-items: center;
 }
+
 .footer-center {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
   justify-content: center;
-}
-.footer-right {
-  display: flex;
-  margin-top: 1em;
   align-items: center;
 }
 
- footer ul > li{
-  margin-right: 1em;
+.footer-right {
+  justify-content: center;
+  margin-top: 1em;
+  align-items: center;
+}
+footer ul > li {
   font-size: 1.3em;
+  margin-right: 1em;
+  margin-block: 1em;
 }
 
+footer ul > li :hover{
+color: rgb(172, 21, 21);
 
-/* } */
- 
+}
+
+.whatsapp-logo a :hover {
+  color: rgb(53, 172, 32);
+}
+
+.facebook-logo a :hover {
+  color: rgb(58, 58, 255);
+}
+.instagram-logo a :hover {
+color: rgb(255, 0, 81);
+}

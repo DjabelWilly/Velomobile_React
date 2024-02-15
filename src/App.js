@@ -1,12 +1,10 @@
 import './App.css';
-import { Outlet, Link} from "react-router-dom";
-import logo from './assets/logovelomobile.png';
+import { Outlet} from "react-router-dom";
 import { useState } from 'react';
 import './sass/header.scss'
 import Footer from './components/Footer';
 import FormContact from './components/FormContact';
 // import { Button } from 'bootstrap';
-import Button from './components/Button';
 import Header from './components/Header';
 
 /**
@@ -18,9 +16,7 @@ import Header from './components/Header';
 function App()
 {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const handleClick = () => {
-    alert('message envoyé!')
-  };
+
 
 
 return (
@@ -29,7 +25,7 @@ return (
     <main>
       <Outlet context={[isLoggedIn, setIsLoggedIn]} />
       <FormContact />
-      <Button onClick={handleClick}></Button>
+      
     </main>
 
     <Footer />

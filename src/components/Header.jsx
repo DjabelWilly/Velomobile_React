@@ -2,8 +2,8 @@ import React from "react";
 import '../App.css';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { IoIosLogIn } from "react-icons/io";
-import { CiLogout } from "react-icons/ci";
+// import { IoIosLogIn } from "react-icons/io";
+// import { CiLogout } from "react-icons/ci";
 import logo from '../assets/logovelomobile.png';
 
 
@@ -44,7 +44,7 @@ function switchMenuBurgerClass(){
                 <ul className='mt-4 row justify-content-around my-2 mb-5'>                    
     {/*------------- Lien à définir pour la navigation --------*/}
                    <li className='navbar-item' onClick = {switchMenuBurgerClass}>
-                    <Link to={`/home`}>Home</Link> 
+                    <Link to={`/home`}>home</Link> 
                   </li>   
 
                     <li className='navbar-item' onClick = {switchMenuBurgerClass}>
