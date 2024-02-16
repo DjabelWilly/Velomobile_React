@@ -11,8 +11,11 @@ import HomePage from './routes/HomePage';
 import ErrorPage from './routes/ErrorPage';
 import LoginPage from './routes/LoginPage';
 import LogoutPage from './routes/LogoutPage';
+import HistoirePage from './routes/HistoirePage';
+import MadeInLozerePage from './routes/MadeInLozerePage';
 import 'bootstrap/dist/css/bootstrap.css';
 import './sass/custom.scss';
+
 
 const router = createBrowserRouter([
   {
@@ -31,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <ProductsPage />,
+      },
+      {
+        path: "histoire",
+        element: <HistoirePage />,
+      },
+      {
+        path: "madeinlozere",
+        element: <MadeInLozerePage />,
       },
       {
         path: "login",

@@ -1,19 +1,29 @@
-import { Button } from "bootstrap";
-
 const FormContact = () => {
   return (
     <div className="container-form my-5">
+      <h2>
+        Envie d'en savoir plus? <br /> Contatez-nous!
+      </h2>
       <form
         id="form-contact"
-        className="d-flex flex-column d-inline-flex col-md-3">
-        <label htmlFor="lastname">Prénom</label>
-        <input type="text" id="lastname" />
-        <label htmlFor="firstname">Nom</label>
+        className="d-flex flex-column d-inline-flex col-md-3"
+      >
+        <label htmlFor="firstname">Prénom</label>
         <input type="text" id="firstname" />
-        <label htmlFor="textarea">Votre message</label>
+        <label htmlFor="lastname">Nom</label>
+        <input type="text" id="lastname" />
+        <label htmlFor="message">Votre message</label>
         <textarea id="message" name="" rows="6"></textarea>
-        <button className= "form-button btn btn-primary" typre="submit">Envoyer</button>
-       
+        <button
+          className="form-button btn btn-light mx-auto my-3"
+          type="submit"
+          style={{
+            width: "30%",
+            border: "1px solid grey",
+          }}
+        >
+          Envoyer
+        </button>
       </form>
     </div>
   );

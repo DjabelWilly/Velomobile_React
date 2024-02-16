@@ -1,13 +1,12 @@
 /* Code imbriqué (nested) */
 header {
   nav {
-    
     ul {
       list-style: none;
       display: flex;
-      
+
       gap: 20px;
-      justify-content: space-around;;
+      justify-content: space-around;
 
       /* Les svg pour la connexion/déconnexion */
       // li.login-out-link {
@@ -25,30 +24,27 @@ header {
 
       a:hover {
         // @include button($fc: #000583);
-         
-           color: rgb(233, 7, 7);
-        
+
+        color: rgb(233, 7, 7);
       }
     }
   }
 }
 
-header{
-  div.wrap-nav{
-    background-color: #D9D9D9;
+header {
+  div.wrap-nav {
+    background-color: #d9d9d9;
     display: flex;
-      justify-content: center;
-      justify-items: center;
-      align-items: center;
-      align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     // padding: 25px;
-    img{
-      
-    
+    img {
       min-width: 40%;
       max-width: 80%;
-      min-height: 10%;   
-      max-height: 25%;   
+      min-height: 10%;
+      max-height: 25%;
     }
   }
 }
@@ -61,13 +57,13 @@ header{
 }
 li {
   list-style: none;
-  
 }
-a,a:visited {
+
+a {
   color: #000583;
   text-decoration: none;
-
 }
+
 a:hover {
   color: rgb(233, 7, 7);
 }
@@ -76,7 +72,7 @@ a:hover {
 nav {
   background: rgb(251, 252, 252);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
   font-size: calc(0.2rem + 1.5vw);
@@ -84,7 +80,8 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
+  
 }
 #icons {
   cursor: pointer;
@@ -97,40 +94,33 @@ nav ul {
   }
   #icons:before {
     content: "\2630";
-
   }
   .active #icons:before {
     content: "\2715";
   }
   nav ul {
-
     flex-direction: column;
     justify-content: center;
     position: fixed;
     height: 100vh;
     left: 100%;
-    top: 16%;    
-    background: #D9D9D9;
+    top: 16%;
+    background: #d9d9d9;
     width: 100%;
     text-align: center;
     transition: 1.25s;
-    
   }
   nav li {
     padding: 10px 0;
     border: none;
     gap: 5px;
-    
   }
-  nav li:hover {
-    background: rgb(255, 255, 255);
-  }
+
   nav.active ul {
     left: 0;
   }
-  a{
-    font-size: 10px;
-    color: rgb(233, 7, 7); 
+  a {
+    // font-size: 20px;
+    color:#000583;
   }
-
 }

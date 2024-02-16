@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import VeloMobile from './../components/VeloMobile';
+import VeloMobile from '../components/VeloMobile';
 import RemoteData from "../services/RemoteData";
 import { useOutletContext } from "react-router-dom";
 
@@ -46,7 +46,7 @@ const ProductsPage = () => {
   return (
     <>
       <h2>Produits</h2>
-      {isLoggedIn ? <p>connecté </p> : <p>pas connecté :</p>}
+      {isLoggedIn ? <p>connecté </p> : <p>pas connecté</p>}
       {errorMsg}
       {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
       {velosMobiles &&

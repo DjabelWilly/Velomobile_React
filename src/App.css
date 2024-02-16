@@ -11,6 +11,10 @@ li {
   max-width: 80vw;
 }
 
+#vm2 {
+  max-width: 50vw;
+}
+
 .App-logo {
   height: 10vmin;
   pointer-events: none;
@@ -58,7 +62,6 @@ li {
   width: 100vw;
   justify-content: space-around;
   align-items: center;
- 
 }
 
 .footer-left {
@@ -75,6 +78,7 @@ li {
   margin-top: 1em;
   justify-content: center;
   align-items: center;
+  color: #000584;
 }
 
 .footer-right {
@@ -88,9 +92,8 @@ footer ul > li {
   margin-block: 1em;
 }
 
-footer ul > li :hover{
-color: rgb(172, 21, 21);
-
+footer ul > li :hover {
+  color: rgb(172, 21, 21);
 }
 
 .whatsapp-logo a :hover {
@@ -101,5 +104,18 @@ color: rgb(172, 21, 21);
   color: rgb(58, 58, 255);
 }
 .instagram-logo a :hover {
-color: rgb(255, 0, 81);
+  color: rgb(255, 0, 81);
+}
+
+#img-velo-old,
+#img-velo-old2 {
+  width: 100%;
+  height: auto;
+}
+
+#containerusine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
 }
