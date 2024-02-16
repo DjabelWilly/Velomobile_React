@@ -16,9 +16,11 @@ const Footer = () => {
               <Link to="/histoire">Histoire</Link>
             </li>
             <li>
-              <Link to="/Lozere">made in Lozère</Link>
+              <Link to="/Lozere">Made in Lozère</Link>
             </li>
-            <li>Showroom</li>
+            <li>
+              <Link to="/showroom">Showroom</Link>
+            </li>
           </ul>
         </div>
         <div className="footer-center">

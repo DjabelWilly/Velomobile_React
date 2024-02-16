@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 const LogoutPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useOutletContext();
+  const [isLoggedin,setIsLoggedIn] = useOutletContext();
   setIsLoggedIn(false);
   return (
     <section>

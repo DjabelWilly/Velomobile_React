@@ -64,4 +64,49 @@ export default class RemoteData {
         return false;
       })
   }
+    /**
+   * 
+   * @param {*} newVeloMobile 
+   * @returns 
+   */
+  static postVeloMobile(newVeloMobile) {
+    return fetch(`${RemoteData.url}velosMobiles/`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify(newVeloMobile)
+    })
+      .then((response) => {
+        console.log(`response.status de post VeloMobile`, response.status);
+        if (response.status !== 201) throw new Error("Erreur " + response.status)
+        return response.json();
+      })
+      .then(data => { console.log(`data reçue après le post : `, data); })
+
+  }
+
+  /**
+   * 
+   * @param {*} updatedVeloMobile 
+   * @returns Promise
+   */
+      static putVeloMobile(updatedVeloMobile) {
+    return fetch(`${RemoteData.url}velosMobiles/${updatedVeloMobile.id}`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "PUT",
+      body: JSON.stringify(updatedVeloMobile)
+    })
+      .then((response) => {
+        console.log(`response.status de put VeloMobile`, response.status);
+        if (response.status !== 200) throw new Error("Erreur " + response.status)
+        return response.json();
+      })
+      .then(data => { console.log(`data reçue après le put : `, data); })
+
+  }
 }

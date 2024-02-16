@@ -32,36 +32,43 @@ function switchMenuBurgerClass(){
 }
 
     return (
-    <header>
-          <div className='wrap-nav'>
-            
-            <Link to={'/'}><img src={logo} alt="Logo vélomobile - retour accueil" /></Link>
-          </div>
-          <div id="icons" onClick={switchMenuBurgerClass}></div>
+      <header>
+        <div className="wrap-nav">
+          <Link to={"/"}>
+            <img src={logo} alt="Logo vélomobile - retour accueil" />
+          </Link>
+        </div>
+        <div id="icons" onClick={switchMenuBurgerClass}></div>
 
-        <nav id="nav" className={switchMenuBurger}> 
-                <ul className='mt-4'>                    
-    {/*------------- Lien à définir pour la navigation --------*/}
-                   <li className='navbar-item' onClick = {switchMenuBurgerClass}>
-                    <Link to={`/home`}>home</Link> 
-                  </li>   
+        <nav id="nav" className={switchMenuBurger}>
+          <ul className="mt-4">
+            {/*------------- Lien à définir pour la navigation --------*/}
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/home`}>Accueil</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/products`}>Modèles</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/madeinlozere`}>Made in Lozère</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/histoire`}>Histoire</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/showroom`}>Showroom</Link>
+            </li>
 
-                    <li className='navbar-item' onClick = {switchMenuBurgerClass}>
-                    <Link to={`/velomobile`}>VELOMOBILE</Link> 
-                  </li>            
+            {/*------------- Liens définis pour la navigation --------*/}
 
-    {/*------------- Liens définis pour la navigation --------*/}
-
-                   <li className='navbar-item' onClick = {switchMenuBurgerClass}>
-                    <Link to={`/products`}>Produits</Link>
-                  </li>
-                  <li className='login-out-link' onClick = {switchMenuBurgerClass}>
-                    <Link to={pathLogged}>{isLoggedIn ? logInOutLink(true) : logInOutLink(false)}</Link>
-                  </li>
-                  
-                </ul>
-      </nav>        
-    </header>
+            <li className="login-out-link" onClick={switchMenuBurgerClass}>
+              <Link to={pathLogged}>
+                {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
     );
 }
 
