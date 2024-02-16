@@ -1,8 +1,8 @@
 const FormContact = () => {
   return (
     <div className="container-form my-5">
-      <h2>
-        Envie d'en savoir plus? <br /> Contatez-nous!
+      <h2 className="fst-italic py-3">
+        Envie d'en savoir plus? <br /> Contactez-nous!
       </h2>
       <form
         id="form-contact"
@@ -12,13 +12,15 @@ const FormContact = () => {
         <input type="text" id="firstname" />
         <label htmlFor="lastname">Nom</label>
         <input type="text" id="lastname" />
+        <label htmlFor="email">email</label>
+        <input type="email" id="mail" />
         <label htmlFor="message">Votre message</label>
         <textarea id="message" name="" rows="6"></textarea>
         <button
           className="form-button btn btn-light mx-auto my-3"
           type="submit"
           style={{
-            width: "30%",
+            width: "auto",
             border: "1px solid grey",
           }}
         >

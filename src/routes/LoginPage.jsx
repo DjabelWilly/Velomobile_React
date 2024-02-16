@@ -6,7 +6,9 @@ const LoginPage = () => {
   const navigate = useNavigate();
   return (
     <section>
+      <br />
       <h2>Identification</h2>
+      <br />
       <form
         onSubmit={(event) => {
           console.log(`Formulaire soumis`);

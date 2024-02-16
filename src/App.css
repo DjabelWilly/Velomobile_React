@@ -8,7 +8,37 @@ li {
 }
 
 #vm1 {
-  max-width: 80vw;
+  width: 100%;
+  height: auto;
+}
+
+#vm1logo{
+  max-width: 50vw;
+  height: auto;
+  justify-content: center;
+ 
+}
+ 
+#containerdesign {
+  display: flex;
+  padding-inline: 18vw;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+ 
+#containerpluie {
+  display: flex;
+  padding-inline: 18vw;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+ 
+
+.text-homePage{
+ font-size: 1.3em;
+  text-align: justify;
 }
 
 #vm2 {
@@ -118,4 +148,72 @@ footer ul > li :hover {
   flex-direction: column;
   justify-content: center;
   text-align: justify;
+}
+
+#usine {
+  max-width: 50vw;
+  height: auto;
+  justify-content: center;
+}
+
+.containerhistoire {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin: 50px;
+ 
+}
+ 
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+   
+ 
+}
+ 
+#histoireTexte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* text-align: justify; */
+}
+ 
+@media screen and (min-width: 768px) {
+  .containerhistoire {
+    flex-direction: row;
+  }
+ 
+  .image,
+  #histoireTexte {
+    flex: 1;
+    margin: 0 10px;
+  }
+}
+ 
+@media screen and (max-width: 767px) {
+  .containerhistoire {
+    flex-direction: column;
+  }
+ 
+  .image,
+  #histoireTexte {
+    flex: 1;
+    margin: 10px 0;
+  }
+}
+
+#containershowroom {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  text-align: center;
+}
+ 
+#agde,#cass,#stnazaire,#salon{
+  max-width: 20vw;
+ 
 }

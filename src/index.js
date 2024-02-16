@@ -13,6 +13,9 @@ import LoginPage from './routes/LoginPage';
 import LogoutPage from './routes/LogoutPage';
 import HistoirePage from './routes/HistoirePage';
 import MadeInLozerePage from './routes/MadeInLozerePage';
+import LandingPagePub from './routes/LandingPagePub';
+import LandingPagePluie from './routes/LandingPagePluie';
+import ShowroomPage from './routes/ShowroomPage';
 import 'bootstrap/dist/css/bootstrap.css';
 import './sass/custom.scss';
 
@@ -46,6 +49,19 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />,
+      },
+      {
+        path: "design_innovant",
+        element: <LandingPagePub />,
+      },
+
+      {
+        path: "velomobile_pluie",
+        element: <LandingPagePluie />,
+      },
+      {
+        path: "showroom",
+        element: <ShowroomPage />,
       },
       {
         path: "logout",

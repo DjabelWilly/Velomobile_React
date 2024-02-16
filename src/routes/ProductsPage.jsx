@@ -45,7 +45,10 @@ const ProductsPage = () => {
   console.log(`dans ProductsPage`);
   return (
     <>
-      <h2>Produits</h2>
+      <h1 className=" d-flex justify-content-center mx-5 mt-5">
+        Le Velomobile Français
+      </h1>
+      <h2 className="mt-5">Nos produits</h2>
       {isLoggedIn ? <p>connecté </p> : <p>pas connecté</p>}
       {errorMsg}
       {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
@@ -53,7 +56,8 @@ const ProductsPage = () => {
         velosMobiles.map((veloMobile) => (
           <VeloMobile
             veloMobile={veloMobile}
-            handleClickDeleteVeloMobile={handleClickDeleteVeloMobile}/>
+            handleClickDeleteVeloMobile={handleClickDeleteVeloMobile}
+          />
         ))}
     </>
   );
