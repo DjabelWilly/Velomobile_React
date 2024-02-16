@@ -13,6 +13,7 @@ const ProductsPage = () => {
   const [velosMobiles, setVelosMobiles] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useOutletContext();
+  
    function handleClickDeleteVeloMobile(veloMobileToDelete) {
     console.log(`Dans DeleteVeloMobile- vélomobile à supprimer :`, veloMobileToDelete);
     //const copyVelosMobiles = velosMobiles.filter((vm) => vm !== veloMobileToDelete)
@@ -46,7 +47,7 @@ const ProductsPage = () => {
   return (
     <>
       <h2>Produits</h2>
-      {isLoggedIn ? <p>connecté </p> : <p>pas connecté :</p>}
+      {isLoggedIn ? <p>connecté</p> : <p>pas connecté</p>}
       {errorMsg}
       {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
       {velosMobiles &&

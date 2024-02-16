@@ -63,11 +63,11 @@ li {
   list-style: none;
   
 }
-a,a:visited {
+a {
   color: #000583;
   text-decoration: none;
-
 }
+//a:visited
 a:hover {
   color: rgb(233, 7, 7);
 }
@@ -129,8 +129,8 @@ nav ul {
     left: 0;
   }
   a{
-    font-size: 10px;
-    color: rgb(233, 7, 7); 
+    font-size: 20px;
+    color: #000583; 
   }
 
 }
