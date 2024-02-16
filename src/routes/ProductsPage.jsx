@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import VeloMobile from '../components/VeloMobile';
 import RemoteData from "../services/RemoteData";
 import { useOutletContext } from "react-router-dom";
-
+import FormPostVeloMobile from '../components/FormPostVeloMobile';
 /**
  * Composant fonction
  * @returns JSX
@@ -13,6 +13,11 @@ const ProductsPage = () => {
   const [velosMobiles, setVelosMobiles] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useOutletContext();
+
+  /**
+   * Function delete velomobile
+   * @param {} veloMobileToDelete 
+   */
    function handleClickDeleteVeloMobile(veloMobileToDelete) {
     console.log(`Dans DeleteVeloMobile- vélomobile à supprimer :`, veloMobileToDelete);
     //const copyVelosMobiles = velosMobiles.filter((vm) => vm !== veloMobileToDelete)
@@ -27,6 +32,45 @@ const ProductsPage = () => {
     // Appel du service "RemoteData" pour exécuter une requête http avec le verbe DELETE
     RemoteData.deleteVeloMobile(veloMobileToDelete.id);
   }
+
+  /**
+   * Function post velomobile
+   * @param {*} event 
+   */
+    function handleSubmitFormPostVeloMobile(event) {
+    event.preventDefault();
+    console.log(`Formulaire d'ajout soumis`);
+    // Create a FormData object from the form - event.target est une référence vers le formulaire
+    const formData = new FormData(event.target);
+    const newVeloMobile = {
+      id: 100,
+      model: formData.get("model"),
+      description: formData.get("description"),
+      weight: formData.get("weight"),
+      photo: formData.get("photo"),
+    }
+    // il faut maintenant ajouter un object au state velosMobiles
+    const copyVelosMobiles = [...velosMobiles, newVeloMobile];
+
+    setVelosMobiles(copyVelosMobiles);
+    event.target.reset();
+    // Ajout de ce nouvel objet veloMobile via une requête http POST
+    delete newVeloMobile.id;
+    RemoteData.postVeloMobile(newVeloMobile)
+      .then(data => {
+        console.log(`data dans productsPage`);
+      })
+      .catch(error => {
+        console.error(error);
+        // Affichage de l'erreur
+        setErrorMsg("Une erreur s'est produite lors de l'ajout d'un vélomobile");
+        // Suppression du message d'erreur au bout de 5 secondes
+        setTimeout(() => {
+          setErrorMsg(undefined);
+        }, 5000);
+      });
+  }
+
   // Programmation asynchrone : le code suivant ne va s'exécuter qu'après le premier chargement (render) du composant (ici ProductsPage)
   useEffect(() => {
     console.log(`Appel du service qui va aller charger les données`);
@@ -45,21 +89,25 @@ const ProductsPage = () => {
   console.log(`dans ProductsPage`);
   return (
     <>
-      <h1 className=" d-flex justify-content-center mx-5 mt-5">
-        Le Velomobile Français
-      </h1>
-      <h2 className="mt-5">Nos produits</h2>
-      {isLoggedIn ? <p>connecté </p> : <p>pas connecté</p>}
-      {errorMsg}
-      {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
-      {velosMobiles &&
-        velosMobiles.map((veloMobile) => (
-          <VeloMobile
-            veloMobile={veloMobile}
-            handleClickDeleteVeloMobile={handleClickDeleteVeloMobile}
-          />
-        ))}
-    </>
+      <h2>Produits</h2>
+<div class="modeles">
+  <div>
+     {isLoggedIn && (
+        <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
+      )}
+      {errorMsg && (
+        <h3 className="text-danger">{errorMsg}</h3>
+      )}
+  </div>
+  <div class="formImage">
+          {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
+      {velosMobiles && velosMobiles.map((veloMobile) =>
+      <VeloMobile veloMobile={veloMobile} handleClickDeleteVeloMobile={handleClickDeleteVeloMobile} />)}
+    
+  </div>
+</div>
+     </>
+    
   );
 }
 

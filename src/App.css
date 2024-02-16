@@ -217,3 +217,82 @@ footer ul > li :hover {
   max-width: 20vw;
  
 }
+
+/* .modeles{
+  display: flex;
+  flex-direction: row;
+}
+
+.formImage{
+display: grid;
+
+} */
+
+
+#usine {
+  max-width: 50vw;
+  height: auto;
+  justify-content: center;
+}
+
+.containerhistoire {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin: 50px;
+ 
+}
+ 
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+   
+ 
+}
+ 
+#histoireTexte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* text-align: justify; */
+}
+ 
+@media screen and (min-width: 768px) {
+  .containerhistoire {
+    flex-direction: row;
+  }
+ 
+  .image,
+  #histoireTexte {
+    flex: 1;
+    margin: 0 10px;
+  }
+}
+ 
+@media screen and (max-width: 767px) {
+  .containerhistoire {
+    flex-direction: column;
+  }
+ 
+  .image,
+  #histoireTexte {
+    flex: 1;
+    margin: 10px 0;
+  }
+}
+
+#containershowroom {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  text-align: center;
+}
+ 
+#agde,#cass,#stnazaire,#salon{
+  max-width: 20vw;
+ 
+}

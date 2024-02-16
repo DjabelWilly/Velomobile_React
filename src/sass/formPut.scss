@@ -1,0 +1,36 @@
+fieldset {
+  border: none;
+  background-color: #000583;
+  border: 2px solid black;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: grid;
+ 
+  
+}
+
+legend {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 4px;
+  color: #D50202;
+ 
+}
+
+.formPut{
+    height: min-content;
+    width: 81vw;
+    padding-left: 66vh;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    color: white;
+    button{
+    background-color: #D50202;
+    color: white;
+    }
+    textarea{
+        height: 30px;
+
+    }
+}

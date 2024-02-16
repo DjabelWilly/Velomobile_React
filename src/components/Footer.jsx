@@ -16,7 +16,7 @@ const Footer = () => {
               <Link to="/histoire">Histoire</Link>
             </li>
             <li>
-              <Link to="/Lozere">Made in Lozère</Link>
+              <Link to="/madeinlozere">Made in Lozère</Link>
             </li>
             <li>
               <Link to="/showroom">Showroom</Link>
