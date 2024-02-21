@@ -13,7 +13,7 @@ const FormContact = () => {
         <label htmlFor="lastname">Nom</label>
         <input type="text" id="lastname" />
         <label htmlFor="email">email</label>
-        <input type="email" id="mail" />
+        <input type="email" id="email" />
         <label htmlFor="message">Votre message</label>
         <textarea id="message" name="" rows="6"></textarea>
         <button

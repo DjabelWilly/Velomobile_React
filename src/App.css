@@ -80,62 +80,7 @@ li {
   max-width: 50%;
 }
 
-@media (max-width: 650px) {
-  .footer-main {
-    flex-direction: column;
-  }
-}
 
-.footer-main {
-  background-color: #d9d9d9 !important;
-  display: flex;
-  width: 100vw;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 1em;
-  align-items: center;
-}
-
-.footer-center {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1em;
-  justify-content: center;
-  align-items: center;
-  color: #000584;
-}
-
-.footer-right {
-  justify-content: center;
-  margin-top: 1em;
-  align-items: center;
-}
-footer ul > li {
-  font-size: 1.3em;
-  margin-right: 1em;
-  margin-block: 1em;
-}
-
-footer ul > li :hover {
-  color: rgb(172, 21, 21);
-}
-
-.whatsapp-logo a :hover {
-  color: rgb(53, 172, 32);
-}
-
-.facebook-logo a :hover {
-  color: rgb(58, 58, 255);
-}
-.instagram-logo a :hover {
-  color: rgb(255, 0, 81);
-}
 
 #img-velo-old,
 #img-velo-old2 {
@@ -174,23 +119,12 @@ footer ul > li :hover {
 }
  
 #histoireTexte {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* text-align: justify; */
+  display: flex; 
+ flex-direction: column;
+  text-align: justify;
 }
  
-@media screen and (min-width: 768px) {
-  .containerhistoire {
-    flex-direction: row;
-  }
- 
-  .image,
-  #histoireTexte {
-    flex: 1;
-    margin: 0 10px;
-  }
-}
+
  
 @media screen and (max-width: 767px) {
   .containerhistoire {
@@ -236,7 +170,7 @@ display: grid;
 }
 
 .containerhistoire {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   margin: 50px;
@@ -252,36 +186,6 @@ display: grid;
  
 }
  
-#histoireTexte {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* text-align: justify; */
-}
- 
-@media screen and (min-width: 768px) {
-  .containerhistoire {
-    flex-direction: row;
-  }
- 
-  .image,
-  #histoireTexte {
-    flex: 1;
-    margin: 0 10px;
-  }
-}
- 
-@media screen and (max-width: 767px) {
-  .containerhistoire {
-    flex-direction: column;
-  }
- 
-  .image,
-  #histoireTexte {
-    flex: 1;
-    margin: 10px 0;
-  }
-}
 
 #containershowroom {
  

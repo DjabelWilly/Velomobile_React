@@ -100,27 +100,37 @@ nav ul {
   }
   nav ul {
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     position: fixed;
     height: 100vh;
     left: 100%;
     top: 16%;
     background: #d9d9d9;
     width: 100%;
-    text-align: center;
+    // text-align: center;
     transition: 1.25s;
+     
   }
   nav li {
-    padding: 10px 0;
+    // padding: 5px 0;
     border: none;
-    gap: 5px;
+    gap: 2px;
+
   }
 
+    li:hover{
+        background-color: white;
+
+    }
   nav.active ul {
     left: 0;
   }
   a {
     // font-size: 20px;
     color:#000583;
+  }
+  a:hover{
+    color: rgb(233, 7, 7);
+
   }
 }
