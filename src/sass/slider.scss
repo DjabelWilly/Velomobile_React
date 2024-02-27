@@ -1,0 +1,45 @@
+
+.carousel{
+    position:relative;
+
+}
+.carousel .thumbs{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+}
+.carousel .thumbs{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+   
+}
+.carousel .overlay{
+    width: 80%;
+    position:absolute;
+    top: 50%;
+    padding: 0.4rem 1.5rem;
+    text-align: center;
+    background: rgba($color: #000000, $alpha: 0.5);
+    transform: translateY(-50);
+    left:10%;
+    color: white;
+    
+}
+.carousel .overlay_title{
+    margin:0.8rem 0 1rem 0;
+}
+
+#slider-caroussel{
+    width: 80vw;
+}
+
+@media screen and (max-width:600px) {
+    .carousel .slide img {
+        width: 100vw !important;
+        height:40vh;
+        object-fit: cover;
+    }
+    
+}

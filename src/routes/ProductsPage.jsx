@@ -20,13 +20,6 @@ const ProductsPage = () => {
    */
    function handleClickDeleteVeloMobile(veloMobileToDelete) {
     console.log(`Dans DeleteVeloMobile- vélomobile à supprimer :`, veloMobileToDelete);
-    //const copyVelosMobiles = velosMobiles.filter((vm) => vm !== veloMobileToDelete)
-    /*  const copyVelosMobiles = [...velosMobiles];
-     // Recherche de l'index de veloMobileToDelete
-     const index = copyVelosMobiles.indexOf(veloMobileToDelete);
-     // Suppression du veloMobile cliqué
-     copyVelosMobiles.splice(index, 1); */
-    // Doit modifier l'état velosMobiles via setVelosMobiles
     setVelosMobiles(velosMobiles.filter((vm) => vm !== veloMobileToDelete));
 
     // Appel du service "RemoteData" pour exécuter une requête http avec le verbe DELETE
@@ -90,22 +83,22 @@ const ProductsPage = () => {
   return (
     <>
       <h2>Produits</h2>
-<div class="modeles">
-  <div>
-     {isLoggedIn && (
-        <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
-      )}
-      {errorMsg && (
-        <h3 className="text-danger">{errorMsg}</h3>
-      )}
-  </div>
-  <div class="formImage">
-          {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
-      {velosMobiles && velosMobiles.map((veloMobile) =>
-      <VeloMobile veloMobile={veloMobile} handleClickDeleteVeloMobile={handleClickDeleteVeloMobile} />)}
-    
-  </div>
-</div>
+        <div class="modeles">
+          <div>
+            {isLoggedIn && (
+                <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
+              )}
+              {errorMsg && (
+                <h3 className="text-danger">{errorMsg}</h3>
+              )}
+          </div>
+          <div class="formImage">
+                  {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
+              {velosMobiles && velosMobiles.map((veloMobile) =>
+              <VeloMobile veloMobile={veloMobile} handleClickDeleteVeloMobile={handleClickDeleteVeloMobile} />)}
+            
+          </div>
+        </div>
      </>
     
   );

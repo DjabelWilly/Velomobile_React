@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import FormContact from './components/FormContact';
 // import { Button } from 'bootstrap';
 import Header from './components/Header';
+import Slider from './components/Slider';
 
 /**
  * Gère l'affichage du composant App
@@ -23,6 +24,7 @@ return (
   <div className="App">
       <Header isLoggedIn={isLoggedIn} />
     <main>
+      
       <Outlet context={[isLoggedIn, setIsLoggedIn]} />
       <FormContact />
       

@@ -7,7 +7,7 @@ const HistoirePage = () => {
       <h2 className="mt-5">L'histoire du vélomobile</h2>
       <br />
 
-      <div className="containerhistoire" id="containerhistoire">
+      <div className="containerHistoire" id="containerHistoire">
         <div className="image">
           <div>
             <img

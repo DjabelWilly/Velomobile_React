@@ -16,8 +16,8 @@ const VeloMobile = (props) => {
           }}
           className="btn btn-danger mx-5">Supprimer</button> 
           </>
-        )}
-
+        )} 
+        
       <img id="vm2" src={`/images/velosmobiles/${props.veloMobile.photo}`} alt="" />
       <p>{props.veloMobile.description}</p>
     </section>

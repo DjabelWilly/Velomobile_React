@@ -9,7 +9,7 @@ const MadeInLozerePage = () => {
 
       <div
         className="container d-inline justify-content-center"
-        id="containerusine"
+        id="containerUsine"
       >
         <img id="usine" src={`/images/velosmobiles/usine1.jpg`} alt="" />
         <p className="container justify-content-center py-5 px-5">
