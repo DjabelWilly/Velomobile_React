@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -16,6 +17,7 @@ import MadeInLozerePage from './routes/MadeInLozerePage';
 import LandingPagePub from './routes/LandingPagePub';
 import LandingPagePluie from './routes/LandingPagePluie';
 import ShowroomPage from './routes/ShowroomPage';
+import AdminPage from './routes/AdminPage';
 import 'bootstrap/dist/css/bootstrap.css';
 import './sass/custom.scss';
 
@@ -67,8 +69,15 @@ const router = createBrowserRouter([
         path: "logout",
         element: <LogoutPage />,
       },
+     
     ],
+
   },
+  {
+    path: "admin",
+    element: <AdminPage />,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
