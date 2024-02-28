@@ -31,17 +31,19 @@ function Slider() {
             photo:"./images/velosmobiles/vm1logo.png"
         }
     ]
-    return <Carousel
-             autoPlay 
+    return <Carousel id="slider-carousel"
+             autoPlay
+             centreMode
              interval={4000} 
              infiniteLoop 
              thumbWidth={120}
              showIndicators={false}
              showStatus={false}
+
             >
               {pictures.map(slide=>(
-                <div key={slide.id}>
-                    <img src={slide.photo} alt="le velomobile made in lozere"/>
+                <div className="imgs-container" key={slide.id}>
+                    <img src={slide.photo} className="imgs-slider" alt="le velomobile made in lozere"/>
                     <div className="overlay">
                         <h2 className="overlay_title">{slide.description}</h2>
                         <p className="overlay_description">{slide.model}</p>

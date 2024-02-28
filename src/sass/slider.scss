@@ -1,6 +1,7 @@
 
 .carousel{
     position:relative;
+    max-height: 50%;
 
 }
 .carousel .thumbs{
@@ -31,10 +32,24 @@
     margin:0.8rem 0 1rem 0;
 }
 
-#slider-caroussel{
-    width: 80vw;
+.imgs-container {
+    height : 100%;
+   
 }
 
+
+.imgs-slider {
+    height: 100%;
+
+}
+
+element.style{
+    width:50%;
+}
+#slider-carousel{
+        max-height:min-content;
+
+}
 @media screen and (max-width:600px) {
     .carousel .slide img {
         width: 100vw !important;

@@ -11,7 +11,7 @@ const HomePage = () => {
         <br />
         <h2>Le Choix Écologique et Pratique</h2>
         <br />  
-           <div id="slider-caroussel"><Slider /></div>   
+           <div id="slider-carousel"><Slider /></div>   
               {/* <div className="d-flex justify-content-center mb-5">
                 <img
                   id="vm1"
@@ -42,6 +42,8 @@ const HomePage = () => {
             </a>
           </div>
           <br />
+        </div>  
+        <div className="row justify-content-center">
           <div className="text-homePage col-md-6 col-sm-10 col-xs-10 py-3">
             <h2>Visibilité et Accessibilité</h2>
             Le vélomobile combine les avantages d'un vélo et d'une voiture. Il
