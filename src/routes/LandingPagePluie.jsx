@@ -10,7 +10,7 @@ const LandingPagePub = () => {
         <br />
         <br />
         <img id="vm1logo" src={`/images/velosmobiles/velopluie.jpg`} alt="" />
-        <div className="container" id="containerdesign">
+        <div className="container" id="containerDesign">
           <p>
             <br />
             <br />

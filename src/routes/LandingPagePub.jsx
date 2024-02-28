@@ -10,7 +10,7 @@ const LandingPagePluie = () => {
       <br />
       <br />
       <img id="vm1logo" src={`/images/velosmobiles/vm1logo.png`} alt="" />
-      <div className="container" id="containerpluie">
+      <div className="container" id="containerPluie">
         <p>
           <br />
           <h3>Les 4 atouts pour se demarquer : </h3>

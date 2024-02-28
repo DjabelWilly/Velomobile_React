@@ -1,3 +1,5 @@
+import Slider from "../components/Slider";
+
 const HomePage = () => {
   return (
     <>
@@ -8,15 +10,16 @@ const HomePage = () => {
         </h1>
         <br />
         <h2>Le Choix Écologique et Pratique</h2>
-        <br />
-        <div className="d-flex justify-content-center mb-5">
-          <img
-            id="vm1"
-            src={`/images/velosmobiles/vm1.png`}
-            alt=""
-            className="img-fluid d-block"
-          />
-        </div>
+        <br />  
+           <div id="slider-carousel"><Slider /></div>   
+              {/* <div className="d-flex justify-content-center mb-5">
+                <img
+                  id="vm1"
+                  src={`/images/velosmobiles/vm1.png`}
+                  alt=""
+                  className="img-fluid d-block"
+                />
+              </div> */}
         <div className="row justify-content-center">
           <div className="text-homePage col-md-6 col-sm-10 col-xs-10 py-3">
             <h2>Durabilité et Écologie</h2>
@@ -39,6 +42,8 @@ const HomePage = () => {
             </a>
           </div>
           <br />
+        </div>  
+        <div className="row justify-content-center">
           <div className="text-homePage col-md-6 col-sm-10 col-xs-10 py-3">
             <h2>Visibilité et Accessibilité</h2>
             Le vélomobile combine les avantages d'un vélo et d'une voiture. Il
@@ -47,8 +52,8 @@ const HomePage = () => {
             <br />
             <a href="design_innovant">
               <strong>
-                Son design innovant lui offre la possibilité permet d'être
-                utilisé en tant que support publicitaire.
+                Son design innovant lui offre la possibilité d'être
+                utilisé comme support publicitaire.
               </strong>
             </a>
           </div>
