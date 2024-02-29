@@ -1,0 +1,38 @@
+.nav-admin {
+  background-color: #000000;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+
+  a {
+    color: white;
+    &:hover {
+      color: aquamarine;
+    }
+  }
+}
+
+// #btn1, #btn2{
+
+// }
+
+.sidebar {
+  height: 100vh;
+  background-color: rgb(146, 146, 146);
+  a {
+    text-align: center;
+    align-items: center;
+    height: 4em;
+    color: white;
+    &:hover {
+      color: aquamarine;
+    }
+  }
+}
+
+.admin-home{
+    height: 100vh;
+}

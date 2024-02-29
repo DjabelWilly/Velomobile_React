@@ -3,6 +3,7 @@ import VeloMobile from '../components/VeloMobile';
 import RemoteData from "../services/RemoteData";
 import { useOutletContext } from "react-router-dom";
 import FormPostVeloMobile from '../components/FormPostVeloMobile';
+import { isLoggedIn, setIsLoggedIn } from '../routes/LoginPage';
 /**
  * Composant fonction
  * @returns JSX
@@ -83,7 +84,7 @@ const ProductsPage = () => {
   return (
     <>
       <h2>Produits</h2>
-        <div class="modeles">
+        <div className="modeles">
           <div>
             {isLoggedIn && (
                 <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
@@ -92,7 +93,7 @@ const ProductsPage = () => {
                 <h3 className="text-danger">{errorMsg}</h3>
               )}
           </div>
-          <div class="formImage">
+          <div className="formImage">
                   {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
               {velosMobiles && velosMobiles.map((veloMobile) =>
               <VeloMobile veloMobile={veloMobile} handleClickDeleteVeloMobile={handleClickDeleteVeloMobile} />)}

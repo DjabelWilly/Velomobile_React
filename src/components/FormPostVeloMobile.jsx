@@ -1,7 +1,9 @@
+
+
 const FormPostVeloMobile = ({ handleSubmitFormPostVeloMobile }) => {
   return (
     
-    <form class="formPost"
+    <form className="formPost"
       onSubmit={(event) => {
         handleSubmitFormPostVeloMobile(event)
       }}

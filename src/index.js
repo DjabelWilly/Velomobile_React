@@ -17,7 +17,12 @@ import MadeInLozerePage from './routes/MadeInLozerePage';
 import LandingPagePub from './routes/LandingPagePub';
 import LandingPagePluie from './routes/LandingPagePluie';
 import ShowroomPage from './routes/ShowroomPage';
+import AdminVeloPage from './routes/AdminVeloPage';
 import AdminPage from './routes/AdminPage';
+import AdminUsersPage from './routes/AdminUsersPage';
+import AdminFormVeloPage from './routes/AdminFormVeloPage';
+import AdminFormUsersPage from './routes/AdminFormUsersPage';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './sass/custom.scss';
 
@@ -77,6 +82,24 @@ const router = createBrowserRouter([
     path: "admin",
     element: <AdminPage />,
   },
+  {
+    path: "admin/velo",
+    element: <AdminVeloPage />,
+  },
+  {
+    path: "admin/users",
+    element: <AdminUsersPage />,
+  },
+  {
+    path: "admin/velo/form",
+    element: <AdminFormVeloPage />,
+  },
+
+  {
+    path: "admin/form/users",
+    element: <AdminFormUsersPage />,
+  }
+
 
 ]);
 
