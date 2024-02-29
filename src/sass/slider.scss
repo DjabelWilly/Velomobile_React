@@ -2,7 +2,7 @@
 .carousel{
     position:relative;
     max-height: 50%;
-
+    
 }
 .carousel .thumbs{
     display: flex;
@@ -27,6 +27,7 @@
     left:10%;
     color: white;
     
+    
 }
 .carousel .overlay_title{
     margin:0.8rem 0 1rem 0;
@@ -48,13 +49,18 @@ element.style{
 }
 #slider-carousel{
         max-height:min-content;
-
+z-index: 2;
 }
+
+
+
 @media screen and (max-width:600px) {
     .carousel .slide img {
         width: 100vw !important;
         height:40vh;
         object-fit: cover;
     }
-    
+
+
 }
+

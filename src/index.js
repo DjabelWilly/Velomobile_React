@@ -18,7 +18,11 @@ import LandingPagePluie from './routes/LandingPagePluie';
 import ShowroomPage from './routes/ShowroomPage';
 import 'bootstrap/dist/css/bootstrap.css';
 import './sass/custom.scss';
-
+import AdminVeloPage from './routes/AdminVeloPage';
+import AdminPage from './routes/AdminPage';
+import AdminUsersPage from './routes/AdminUsersPage';
+import AdminFormVeloPage from './routes/AdminFormVeloPage';
+import AdminFormUsersPage from './routes/AdminFormUsersPage';
 
 const router = createBrowserRouter([
   {
@@ -68,7 +72,30 @@ const router = createBrowserRouter([
         element: <LogoutPage />,
       },
     ],
+
+   },
+  {
+    path: "admin",
+    element: <AdminPage />,
   },
+  {
+    path: "admin/velo",
+    element: <AdminVeloPage />,
+  },
+  {
+    path: "admin/users",
+    element: <AdminUsersPage />,
+  },
+  {
+    path: "admin/velo/form",
+    element: <AdminFormVeloPage />,
+  },
+ 
+  {
+    path: "admin/form/users",
+    element: <AdminFormUsersPage />,
+  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

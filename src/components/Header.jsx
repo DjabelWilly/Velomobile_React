@@ -4,8 +4,11 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 // import { IoIosLogIn } from "react-icons/io";
 // import { CiLogout } from "react-icons/ci";
+import { IoIosLeaf } from "react-icons/io";
 import logo from '../assets/logovelomobile.png';
-const Header = ({ isLoggedIn }) => {
+
+
+const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
 
 //Function useSate () Etat initial "inactive"
   const [switchMenuBurger, setSwitchMenuBurger] = useState("inactive");
@@ -29,6 +32,8 @@ function switchMenuBurgerClass(){
   const classAction = switchMenuBurger === "inactive" ? "active" : "inactive";
   console.log(`dans switchMenuBurgerClass`, classAction);
   setSwitchMenuBurger(classAction);
+   if(switchMenuBurger === "active") setSwitchMenuBurger("slider-responsive");
+  else setSwitchMenuBurger ("active");
 }
 
     return (
@@ -41,7 +46,7 @@ function switchMenuBurgerClass(){
         <div id="icons" onClick={switchMenuBurgerClass}></div>
 
         <nav id="nav" className={switchMenuBurger}>
-          <ul className="mt-4">
+          <ul className="col-9 mt-4">
             {/*------------- Lien à définir pour la navigation --------*/}
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
               <Link to={`/home`}>Accueil</Link>
@@ -58,9 +63,22 @@ function switchMenuBurgerClass(){
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
               <Link to={`/showroom`}>Showroom</Link>
             </li>
-
+          </ul>
             {/*------------- Liens définis pour la navigation --------*/}
-
+          <ul className="col-3 nav-option">
+            <li>
+              <button className="btn btn-success" onClick={toggleMode}>
+              {modeSombre === "light" ? (
+                <>
+                  <IoIosLeaf className="mr-" />
+                  Eco View
+                </>
+              ) : (
+                
+                "Defaut View"
+              )}
+            </button>
+            </li>
             <li className="login-out-link" onClick={switchMenuBurgerClass}>
               <Link to={pathLogged}>
                 {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}

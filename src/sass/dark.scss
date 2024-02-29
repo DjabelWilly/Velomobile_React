@@ -1,0 +1,49 @@
+.sombre{
+    color:white !important;
+    background-color: black !important;
+    height: 100vh;
+
+.App{
+        background-color: black !important;
+
+}
+
+#nav{
+    //  color:white !important;
+    background-color: black !important;
+     a {
+      color: white;
+      
+     }
+     a:hover{
+      color: rgb(233, 7, 7);
+     }
+}
+.wrap-nav{
+    background-color: white !important;
+       img {
+      color: white;
+   
+    //   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+      background-color: invert($color: black);   
+ 
+    }
+}
+
+.footer-main{
+    background-color: black !important;
+     a {
+        color: white;
+       }
+     a:hover{
+      color: rgb(233, 7, 7);
+     }
+}
+
+.footer-center{
+    background-color: black !important;
+     a{
+        color: white !important;
+       }
+}
+}

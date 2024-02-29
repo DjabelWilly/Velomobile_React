@@ -5,7 +5,7 @@
 }
 
 .footer-main {
-  background-color: #d9d9d9 !important;
+  background-color: #d9d9d9;
   display: flex;
   width: 100vw;
   justify-content: space-around;
@@ -41,7 +41,7 @@ footer ul > li {
 }
 
 footer ul > li :hover {
-  color: rgb(172, 21, 21);
+  color:rgb(233, 7, 7);
 }
 
 .whatsapp-logo a :hover {
@@ -52,5 +52,5 @@ footer ul > li :hover {
   color: rgb(58, 58, 255);
 }
 .instagram-logo a :hover {
-  color: rgb(255, 0, 81);
+  color:rgb(233, 7, 7);
 }
