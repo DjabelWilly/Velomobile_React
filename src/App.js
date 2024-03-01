@@ -1,12 +1,13 @@
 import './App.css';
 import { Outlet} from "react-router-dom";
 import { useState } from 'react';
-// import './sass/header.scss'
+import './sass/header.scss'
 import Footer from './components/Footer';
 import FormContact from './components/FormContact';
 // import { Button } from 'bootstrap';
 import Header from './components/Header';
-import Slider from './components/Slider';
+
+
 
 /**
  * Gère l'affichage du composant App
@@ -19,9 +20,11 @@ function App()
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [modeSombre, setModeSombre] = useState("clair");
 
-function toggleMode(){
-  if(modeSombre === "clair") setModeSombre("sombre");
-  else setModeSombre ("clair");
+
+  function toggleMode() {
+    modeSombre === "clair" ? setModeSombre("sombre") : setModeSombre("clair")
+   
+  
   console.log('dans tooglemode')
 }
 

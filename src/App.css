@@ -1,6 +1,8 @@
 .App {
-  text-align: center;
+text-align: center;
+overflow-x: hidden;
 }
+
 
 li {
   list-style: none;
@@ -12,11 +14,10 @@ li {
   height: auto;
 }
 
-#vm1logo{
+#vm1logo {
   max-width: 50vw;
   height: auto;
   justify-content: center;
- 
 }
  
 #containerDesign {
@@ -34,10 +35,9 @@ li {
   justify-content: center;
   text-align: justify;
 }
- 
 
-.text-homePage{
- font-size: 1.3em;
+.text-homePage {
+  font-size: 1.3em;
   text-align: justify;
 }
 
@@ -106,18 +106,15 @@ li {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   margin: 50px;
- 
 }
- 
+
 .image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 10px;
-   
- 
 }
- 
+
 #histoireTexte {
   display: flex; 
  flex-direction: column;
@@ -130,7 +127,7 @@ li {
   .containerhistoire {
     flex-direction: column;
   }
- 
+
   .image,
   #histoireTexte {
     flex: 1;
@@ -146,10 +143,12 @@ li {
   text-align: justify;
   text-align: center;
 }
- 
-#agde,#cass,#stnazaire,#salon{
+
+#agde,
+#cass,
+#stnazaire,
+#salon {
   max-width: 20vw;
- 
 }
 
 /* .modeles{
@@ -162,7 +161,6 @@ display: grid;
 
 } */
 
-
 #usine {
   max-width: 50vw;
   height: auto;
@@ -174,16 +172,13 @@ display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   margin: 50px;
- 
 }
- 
+
 .image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 10px;
-   
- 
 }
  
 
@@ -195,8 +190,11 @@ display: grid;
   text-align: justify;
   text-align: center;
 }
- 
-#agde,#cass,#stnazaire,#salon{
+
+#agde,
+#cass,
+#stnazaire,
+#salon {
   max-width: 20vw;
- 
 }
+

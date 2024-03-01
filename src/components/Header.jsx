@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 // import { IoIosLogIn } from "react-icons/io";
 // import { CiLogout } from "react-icons/ci";
-import { IoIosLeaf } from "react-icons/io";
 import logo from '../assets/logovelomobile.png';
+import { IoMoonSharp } from "react-icons/io5";
+import { GoSun } from "react-icons/go";
 
 
 const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
@@ -63,21 +64,18 @@ function switchMenuBurgerClass(){
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
               <Link to={`/showroom`}>Showroom</Link>
             </li>
-        
-            {/*------------- Liens définis pour la navigation --------*/}
-          
+          </ul>
+          {/*------------- Liens définis pour la navigation --------*/}
+          <ul className="col-3 nav-option">
             <li>
-              <button className="btn btn-success" onClick={toggleMode}>
-              {modeSombre === "light" ? (
-                <>
-                  <IoIosLeaf className="mr-" />
-                  Eco View
-                </>
+              {/* <ImSwitch onClick={toggleMode} />{" "}
+              {modeSombre === "sombre" ? <GoSun /> : <IoMoonSharp />} */}
+
+              {modeSombre === "sombre" ? (
+                <GoSun onClick={toggleMode} />
               ) : (
-                
-                "Mode Sombre"
+                <IoMoonSharp onClick={toggleMode} />
               )}
-            </button>
             </li>
             <li className="login-out-link" onClick={switchMenuBurgerClass}>
               <Link to={pathLogged}>

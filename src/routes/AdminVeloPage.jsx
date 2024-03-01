@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import { RiHome2Line } from "react-icons/ri";
 
 const AdminVeloPage = () => {
   return (
     <>
       <div className="nav-admin">
-        <Link to={"/"}>retour à l'accueil</Link>
+        <div className="title">
+          <h2>back office Velomobile</h2>
+        </div>
+        <div>
+          <Link to={"/"}>
+            <RiHome2Line size={24} />
+          </Link>
+        </div>
       </div>
 
       <div className="container-fluid d-flex mx-0 px-0">
@@ -30,35 +38,26 @@ const AdminVeloPage = () => {
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1 </th>
-                <td>toto </td>
-                <td>testhhhhhhhhh</td>
-                <td> 35 </td>
+                <th scope="row"> </th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
                 <td> </td>
                 <div className="d-flex justify-content-end">
-                  <button className="btn btn-primary mx-2">Modifier</button>
+                  <Link to={""}>
+                    <button className="btn btn-primary mx-2">Modifier</button>
+                  </Link>
+
                   <button className="btn btn-danger">Supprimer</button>
                 </div>
-              </tr>
-              <tr>
-                <th scope="row"> 2</th>
-                <td>titi </td>
-                <td>x </td>
-                <td>x</td>
-                <td>x</td>
-              </tr>
-              <tr>
-                <th scope="row"> n</th>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
               </tr>
             </tbody>
           </table>
           <div className="d-flex justify-content-end">
             <Link to={"/admin/velo/form"}>
-              <button className="btn btn-secondary my-5 mx-2">Ajouter vélomobile</button>
+              <button className="btn btn-secondary my-5 mx-2">
+                Ajouter vélomobile
+              </button>
             </Link>
           </div>
         </div>

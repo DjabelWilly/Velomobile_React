@@ -3,6 +3,7 @@ import VeloMobile from '../components/VeloMobile';
 import RemoteData from "../services/RemoteData";
 import { useOutletContext } from "react-router-dom";
 import FormPostVeloMobile from '../components/FormPostVeloMobile';
+import { isLoggedIn, setIsLoggedIn } from '../routes/LoginPage';
 /**
  * Composant fonction
  * @returns JSX
