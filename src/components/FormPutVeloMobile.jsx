@@ -2,7 +2,7 @@ const FormPutVeloMobile = ({veloMobile, handleSubmitFormPutVeloMobile }) => {
   return (
     <form class="formPut"
       onSubmit={(event) => {
-        handleSubmitFormPutVeloMobile(event)
+        handleSubmitFormPutVeloMobile(event, veloMobile.id)
       }}
       action="">
       <fieldset> 

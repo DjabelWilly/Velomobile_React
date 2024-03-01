@@ -65,8 +65,8 @@ function switchMenuBurgerClass(){
             </li>
           </ul>
             {/*------------- Liens définis pour la navigation --------*/}
-          <ul className="col-3 nav-option">
-            <li>
+          {/* <ul className="col-3 nav-option"> */}
+            <li className="nav-option">
               <button className="btn btn-success" onClick={toggleMode}>
               {modeSombre === "light" ? (
                 <>
@@ -84,7 +84,7 @@ function switchMenuBurgerClass(){
                 {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
               </Link>
             </li>
-          </ul>
+          {/* </ul> */}
         </nav>
       </header>
     );

@@ -13,9 +13,20 @@ const ProductsPage = () => {
   const [velosMobiles, setVelosMobiles] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useOutletContext();
+  const [addingVeloMobile,setAddingVeloMobile] = useState(false); 
+  const [veloMobileToUpdate, setVelosMobilesToUpdate] = useState(0);
+
+//Function Add of buttonClick
+function handleClickBtnAddVeloMobile(veloMobileToUpdate){
+  console.log(`Dans handleClickBtnAddVelomobile`);
+  setAddingVeloMobile((currentValue) => {
+    return !currentValue;
+  })
+}
+
 
   /**
-   * Function delete velomobile
+   * Function delete of buttonclick
    * @param {} veloMobileToDelete 
    */
    function handleClickDeleteVeloMobile(veloMobileToDelete) {
@@ -24,6 +35,23 @@ const ProductsPage = () => {
 
     // Appel du service "RemoteData" pour exécuter une requête http avec le verbe DELETE
     RemoteData.deleteVeloMobile(veloMobileToDelete.id);
+  }
+
+  /**
+   * Function update of buttonClick
+   * @param {} veloMobileToUpdate 
+   */
+  function handleClickBtnUpdateVeloMobile(veloMobileToUpdate){
+    console.log(`Dans handleUpVeloMobile:`, veloMobileToUpdate);
+    setVelosMobilesToUpdate(veloMobileToUpdate.id)
+  }
+
+  /**
+   * Function update velomobile
+   */
+  function handleSubmitFormPutVeloMobile(veloMobileId){
+    console.log(`Formulaire de modification soumis un vélomobile par son Id :`, veloMobileId)
+    setVelosMobilesToUpdate(veloMobileToUpdate.id);
   }
 
   /**
@@ -80,23 +108,34 @@ const ProductsPage = () => {
       });
   }, [])
   console.log(`dans ProductsPage`);
+
   return (
     <>
       <h2>Produits</h2>
         <div className="modeles">
           <div>
-            
-            {/* {isLoggedIn && (
+            {errorMsg}
+            {isLoggedIn &&(
+              <button onClick={handleClickBtnAddVeloMobile}
+              className="btn btn-success mb-5" id="add-velomobile">Ajouter un vélomobile</button>
+            )}
+            {isLoggedIn && addingVeloMobile && (
                 <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
               )}
               {errorMsg && (
                 <h3 className="text-danger">{errorMsg}</h3>
-              )} */}
+              )}
           </div>
           <div className="formImage">
                   {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
-              {velosMobiles && velosMobiles.map((veloMobile) =>
-              <VeloMobile veloMobile={veloMobile} handleClickDeleteVeloMobile={handleClickDeleteVeloMobile} />)}
+              {velosMobiles && !addingVeloMobile && velosMobiles.map((veloMobile) =>
+              <VeloMobile key={veloMobile.id}
+              veloMobile={veloMobile} 
+              handleClickDeleteVeloMobile={handleClickDeleteVeloMobile}
+              handleClickBtnUpdateVeloMobile={handleClickBtnUpdateVeloMobile} 
+              handleSubmitFormPutVeloMobile={handleSubmitFormPutVeloMobile}
+              veloMobileToUpdate={(veloMobile.id == veloMobileToUpdate)}
+              />)}
             
           </div>
         </div>

@@ -39,6 +39,13 @@ const AdminUsersPage = () => {
                   <td> </td>
                   <div className="d-flex justify-content-end">
                     <button className="btn btn-primary mx-2">Modifier</button>
+    {/* {isLoggedIn && (
+                <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
+              )}
+              {errorMsg && (
+                <h3 className="text-danger">{errorMsg}</h3>
+              )} */}
+
                     <button className="btn btn-danger">Supprimer</button>
                   </div>
                 </tr>
