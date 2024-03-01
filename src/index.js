@@ -22,14 +22,9 @@ import AdminPage from './routes/AdminPage';
 import AdminUsersPage from './routes/AdminUsersPage';
 import AdminFormVeloPage from './routes/AdminFormVeloPage';
 import AdminFormUsersPage from './routes/AdminFormUsersPage';
-
 import 'bootstrap/dist/css/bootstrap.css';
 import './sass/custom.scss';
-import AdminVeloPage from './routes/AdminVeloPage';
-import AdminPage from './routes/AdminPage';
-import AdminUsersPage from './routes/AdminUsersPage';
-import AdminFormVeloPage from './routes/AdminFormVeloPage';
-import AdminFormUsersPage from './routes/AdminFormUsersPage';
+
 
 const router = createBrowserRouter([
   {
@@ -94,12 +89,15 @@ const router = createBrowserRouter([
     element: <AdminUsersPage />,
   },
   {
-    path: "admin/velo/form",
+    path: "admin/velo/createForm",
     element: <AdminFormVeloPage />,
   },
- 
   {
-    path: "admin/form/users",
+    path: "admin/velo/putForm",
+    element: <AdminFormVeloPage />,
+  },
+  {
+    path: "admin/users/form",
     element: <AdminFormUsersPage />,
   }
   
