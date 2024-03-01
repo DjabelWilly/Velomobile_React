@@ -4,16 +4,19 @@ const MadeInLozerePage = () => {
       <h1 className=" d-flex justify-content-center mx-5 mt-5">
         Le Velomobile Français
       </h1>
-      <h2 className="mt-5">Notre usine en Lozere</h2>
-      <br />
+      <h2 className="mt-5 ">Notre usine en Lozere</h2>
 
       <div
         className="container d-inline justify-content-center"
         id="containerUsine"
       >
-        <img id="usine" src={`/images/velosmobiles/usine1.jpg`} alt="" />
-        <p className="container justify-content-center py-5 px-5">
-          <br />
+        <img
+          id="usine"
+          className="my-4"
+          src={`/images/velosmobiles/usine1.jpg`}
+          alt=""
+        />
+        <p className="container justify-content-center py-4 px-5">
           Bienvenue à l'Usine "Le Vélomobile Français", un établissement
           révolutionnaire situé au cœur des paysages préservés de la Lozère.
           Ici, nous combinons l'artisanat traditionnel avec les dernières
