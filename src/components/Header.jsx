@@ -63,9 +63,9 @@ function switchMenuBurgerClass(){
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
               <Link to={`/showroom`}>Showroom</Link>
             </li>
-          </ul>
+        
             {/*------------- Liens définis pour la navigation --------*/}
-          <ul className="col-3 nav-option">
+          
             <li>
               <button className="btn btn-success" onClick={toggleMode}>
               {modeSombre === "light" ? (
@@ -75,7 +75,7 @@ function switchMenuBurgerClass(){
                 </>
               ) : (
                 
-                "Defaut View"
+                "Mode Sombre"
               )}
             </button>
             </li>
