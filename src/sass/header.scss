@@ -4,27 +4,11 @@ header {
     ul {
       list-style: none;
       display: flex;
-
-      gap: 20px;
+      gap: 15px;
       justify-content: space-around;
-
-      /* Les svg pour la connexion/déconnexion */
-      // li.login-out-link {
-      //   svg {
-      //     color: black;
-      //     font-size: 1.0em;
-      //   }
-
-      //   &:hover {
-      //     svg {
-      //       color: $primary;
-      //     }
-      //   }
-      // }
+      align-items: center;
 
       a:hover {
-        // @include button($fc: #000583);
-
         color: rgb(233, 7, 7);
       }
     }
@@ -39,7 +23,7 @@ header {
     justify-items: center;
     align-items: center;
     align-content: center;
-    // padding: 25px;
+
     img {
       min-width: 40%;
       max-width: 80%;
@@ -57,11 +41,13 @@ header {
 }
 li {
   list-style: none;
+ 
 }
 
 a {
   color: #000583;
   text-decoration: none;
+
 }
 
 a:hover {
@@ -70,19 +56,18 @@ a:hover {
 
 /**** NAVBAR ****/
 nav {
-  background: rgb(251, 252, 252);
+  background: rgb(252, 252, 252);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
+  justify-content: center;
   font-size: calc(0.2rem + 1.5vw);
-  
 }
 nav ul {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
- 
 }
 #icons {
   cursor: pointer;
@@ -101,44 +86,31 @@ nav ul {
   }
   nav ul {
     flex-direction: column;
-    // justify-content: center;
     position: fixed;
     height: 70vh;
     left: 100%;
-    top: 16%;
     background: #d9d9d9;
     width: 100vw;
-    // text-align: center;
     transition: 1.25s;
     z-index: 3;
-     
   }
   nav li {
-    // padding: 5px 0;
     border: none;
-    gap: 1px;
-   
   }
 
-    li:hover{
-        background-color: white;
-
-    }
+  li:hover {
+    background-color: white;
+  }
   nav.active ul {
     left: 0;
     z-index: 3;
   }
-  
 
   a {
-     font-size: 15px;
-    color:#000583;
+    font-size: 15px;
+    color: #000583;
   }
-  a:hover{
+  a:hover {
     color: rgb(233, 7, 7);
-
   }
-
-
-
 }
