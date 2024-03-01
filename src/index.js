@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -16,13 +17,14 @@ import MadeInLozerePage from './routes/MadeInLozerePage';
 import LandingPagePub from './routes/LandingPagePub';
 import LandingPagePluie from './routes/LandingPagePluie';
 import ShowroomPage from './routes/ShowroomPage';
-import 'bootstrap/dist/css/bootstrap.css';
-import './sass/custom.scss';
 import AdminVeloPage from './routes/AdminVeloPage';
 import AdminPage from './routes/AdminPage';
 import AdminUsersPage from './routes/AdminUsersPage';
 import AdminFormVeloPage from './routes/AdminFormVeloPage';
 import AdminFormUsersPage from './routes/AdminFormUsersPage';
+import 'bootstrap/dist/css/bootstrap.css';
+import './sass/custom.scss';
+
 
 const router = createBrowserRouter([
   {
@@ -87,12 +89,15 @@ const router = createBrowserRouter([
     element: <AdminUsersPage />,
   },
   {
-    path: "admin/velo/form",
+    path: "admin/velo/createForm",
     element: <AdminFormVeloPage />,
   },
- 
   {
-    path: "admin/form/users",
+    path: "admin/velo/putForm",
+    element: <AdminFormVeloPage />,
+  },
+  {
+    path: "admin/users/form",
     element: <AdminFormUsersPage />,
   }
   

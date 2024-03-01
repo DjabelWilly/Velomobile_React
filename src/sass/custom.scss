@@ -1,9 +1,9 @@
-   // Override default variables before the import
-   // $secondary: #d9d9d9;
+// Override default variables before the import
+// $secondary: #d9d9d9;
 
-   // Import Bootstrap and its default variables
-   @import '~bootstrap/scss/bootstrap.scss';
-    @import './mixin.scss';
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./mixin.scss";
 
     @import '../sass/header.scss';
     @import '../sass/formPut.scss';
