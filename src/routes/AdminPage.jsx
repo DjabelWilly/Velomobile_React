@@ -5,6 +5,7 @@ import "../App.css";
 const AdminPage = () => {
   return (
     <>
+    
       <div className="nav-admin">
         <Link to={"/"}>retour à l'accueil</Link>
       </div>

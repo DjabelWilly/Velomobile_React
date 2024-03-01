@@ -25,7 +25,11 @@ import AdminFormUsersPage from './routes/AdminFormUsersPage';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './sass/custom.scss';
-
+import AdminVeloPage from './routes/AdminVeloPage';
+import AdminPage from './routes/AdminPage';
+import AdminUsersPage from './routes/AdminUsersPage';
+import AdminFormVeloPage from './routes/AdminFormVeloPage';
+import AdminFormUsersPage from './routes/AdminFormUsersPage';
 
 const router = createBrowserRouter([
   {
@@ -74,10 +78,9 @@ const router = createBrowserRouter([
         path: "logout",
         element: <LogoutPage />,
       },
-     
     ],
 
-  },
+   },
   {
     path: "admin",
     element: <AdminPage />,
@@ -94,13 +97,12 @@ const router = createBrowserRouter([
     path: "admin/velo/form",
     element: <AdminFormVeloPage />,
   },
-
+ 
   {
     path: "admin/form/users",
     element: <AdminFormUsersPage />,
   }
-
-
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

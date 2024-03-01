@@ -86,12 +86,13 @@ const ProductsPage = () => {
       <h2>Produits</h2>
         <div className="modeles">
           <div>
-            {isLoggedIn && (
+            
+            {/* {isLoggedIn && (
                 <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
               )}
               {errorMsg && (
                 <h3 className="text-danger">{errorMsg}</h3>
-              )}
+              )} */}
           </div>
           <div className="formImage">
                   {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}

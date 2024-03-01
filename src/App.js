@@ -17,12 +17,18 @@ import Slider from './components/Slider';
 function App()
 {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [modeSombre, setModeSombre] = useState("clair");
 
-
+function toggleMode(){
+  if(modeSombre === "clair") setModeSombre("sombre");
+  else setModeSombre ("clair");
+  console.log('dans tooglemode')
+}
 
 return (
-  <div className="App">
-      <Header isLoggedIn={isLoggedIn} />
+<div className={modeSombre}> 
+  <div className='App'>
+      <Header isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>
     <main>
       
       <Outlet context={[isLoggedIn, setIsLoggedIn]} />
@@ -32,6 +38,7 @@ return (
 
     <Footer />
   </div>
+</div> 
 );
 
 
