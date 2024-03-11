@@ -9,6 +9,8 @@ import { IoMoonSharp } from "react-icons/io5";
 import { GoSun } from "react-icons/go";
 import { CiLogin } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
+import { CiLogin } from "react-icons/ci";
+import { CiLogout } from "react-icons/ci";
 
 
 const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {

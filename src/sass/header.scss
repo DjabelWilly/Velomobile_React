@@ -24,6 +24,7 @@ header {
     align-items: center;
     align-content: center;
 
+
     img {
       min-width: 40%;
       max-width: 80%;
@@ -39,6 +40,7 @@ header {
   margin: 0;
   font-family: "Segoe UI";
 }
+
 li {
   list-style: none;
  
@@ -63,12 +65,14 @@ nav {
   justify-content: center;
   font-size: calc(0.2rem + 1.5vw);
 }
+
 nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
+
 #icons {
   cursor: pointer;
   display: none;
@@ -78,12 +82,15 @@ nav ul {
   #icons {
     display: block;
   }
+
   #icons:before {
     content: "\2630";
   }
+
   .active #icons:before {
     content: "\2715";
   }
+
   nav ul {
     flex-direction: column;
     position: fixed;
@@ -94,6 +101,7 @@ nav ul {
     transition: 1.25s;
     z-index: 3;
   }
+
   nav li {
     border: none;
   }

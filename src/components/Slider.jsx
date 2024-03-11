@@ -31,6 +31,8 @@ function Slider() {
             photo:"./images/velosmobiles/vm1logo.png"
         }
     ]
+
+    
     return <Carousel id="slider-carousel"
              autoPlay
              centreMode

@@ -4,6 +4,8 @@ import RemoteData from "../services/RemoteData";
 import { useOutletContext } from "react-router-dom";
 import FormPostVeloMobile from '../components/FormPostVeloMobile';
 import { isLoggedIn, setIsLoggedIn } from '../routes/LoginPage';
+
+
 /**
  * Composant fonction
  * @returns JSX
@@ -12,13 +14,32 @@ const ProductsPage = () => {
   // Création d'un état (velosMobiles), création d'un setter correspondant
   // Assignation d'une valeur par défaut
   const [velosMobiles, setVelosMobiles] = useState([]);
+  const [veloMobileToUp, setVelosMobilesToUp] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useOutletContext();
   const [addingVeloMobile,setAddingVeloMobile] = useState(false); 
-  const [veloMobileToUpdate, setVelosMobilesToUpdate] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useOutletContext();
+
+  // Programmation asynchrone : le code suivant ne va s'exécuter qu'après le premier chargement (render) du composant (ici ProductsPage)
+  useEffect(() => {
+    console.log(`Appel du service qui va aller charger les données`);
+  if (errorMsg !== undefined){ 
+    RemoteData.loadVelosMobiles()
+      .then((remoteVelosMobiles) => {
+        console.log(`remoteVelosMobiles : `, remoteVelosMobiles);
+        // Modification du state qui va impliquer un rechargement de la vue
+        // c'est à dire le rappel de render
+        setVelosMobiles(remoteVelosMobiles);
+      })
+      .catch(error => {
+        console.log(`Erreur attrapée dans useEffect : `, error);
+        setErrorMsg(error.toString());
+      });
+    }  
+  }, [errorMsg])
+  console.log(`dans ProductsPage`);
 
 //Function Add of buttonClick
-function handleClickBtnAddVeloMobile(veloMobileToUpdate){
+function handleClickBtnAddVeloMobile(veloMobileToUp){
   console.log(`Dans handleClickBtnAddVelomobile`);
   setAddingVeloMobile((currentValue) => {
     return !currentValue;
@@ -40,21 +61,62 @@ function handleClickBtnAddVeloMobile(veloMobileToUpdate){
 
   /**
    * Function update of buttonClick
-   * @param {} veloMobileToUpdate 
+   * @param {} veloMobileToUp 
    */
   function handleClickBtnUpdateVeloMobile(veloMobileToUpdate){
-    console.log(`Dans handleUpVeloMobile:`, veloMobileToUpdate);
-    setVelosMobilesToUpdate(veloMobileToUpdate.id)
+    console.log(`Dans handleUpdateVeloMobile:`, veloMobileToUpdate);
+    setVelosMobilesToUp(veloMobileToUpdate.id);
   }
 
   /**
    * Function update velomobile
    */
-  function handleSubmitFormPutVeloMobile(veloMobileId){
+  function handleSubmitFormPutVeloMobile(event,veloMobileId){
+    event.preventDefault();
     console.log(`Formulaire de modification soumis un vélomobile par son Id :`, veloMobileId)
-    setVelosMobilesToUpdate(veloMobileToUpdate.id);
-  }
+    //Create a FormData object from th Form - event.target est une référence vers le formulaire
+    
+    const formData = new FormData(event.target);
+    const updatedVeloMobile = {
+      id:veloMobileId,
+      model: formData.get("model"),
+      description:formData.get("description"),
+      weight: formData.get("weight"),
+      photo: formData.get("photo")
+    }
 
+    setVelosMobiles(currentVelosMobiles => {
+      return currentVelosMobiles.map(vm => {
+        if(vm.id === veloMobileId){
+          vm.model = formData.get("model");
+          vm.description = formData.get("description");
+          vm.weight = formData.get("weigh");
+          vm.photo = formData.get("photo");
+          console.log(`vm :`, vm)
+        }
+        return vm;
+
+      })
+    });
+  setVelosMobilesToUp(0);
+
+RemoteData.putVeloMobile(updatedVeloMobile)
+  .then(data => {
+    console.log(`dans productsPage`,data);
+  })
+  .catch(error => {
+    console.error(error);
+
+    //Affichage de l'erreur
+    setErrorMsg("Une erreur est apparue lors de la modification du vélomobile");
+
+    //Suppression du message d'erreur lors de 5 secondes
+    setTimeout(() => {
+      setErrorMsg(undefined);
+    }, 5000 );  
+
+  });
+}
   /**
    * Function post velomobile
    * @param {*} event 
@@ -62,25 +124,33 @@ function handleClickBtnAddVeloMobile(veloMobileToUpdate){
     function handleSubmitFormPostVeloMobile(event) {
     event.preventDefault();
     console.log(`Formulaire d'ajout soumis`);
+    setAddingVeloMobile(false);
     // Create a FormData object from the form - event.target est une référence vers le formulaire
     const formData = new FormData(event.target);
     const newVeloMobile = {
-      id: 100,
+      id: -1,
       model: formData.get("model"),
       description: formData.get("description"),
       weight: formData.get("weight"),
       photo: formData.get("photo"),
     }
     // il faut maintenant ajouter un object au state velosMobiles
-    const copyVelosMobiles = [...velosMobiles, newVeloMobile];
-
-    setVelosMobiles(copyVelosMobiles);
+    setVelosMobiles(currentVelosMobiles => {
+    return [...currentVelosMobiles, newVeloMobile];
+    });
+    
     event.target.reset();
+
     // Ajout de ce nouvel objet veloMobile via une requête http POST
-    delete newVeloMobile.id;
     RemoteData.postVeloMobile(newVeloMobile)
       .then(data => {
-        console.log(`data dans productsPage`);
+        console.log(`data dans productsPage`, data);
+        setVelosMobiles(currentVelosMobiles => {
+          return currentVelosMobiles.map((vm) => {
+            if (vm.id === (-1)) vm.id = data.id
+            return vm  
+          })
+        })
       })
       .catch(error => {
         console.error(error);
@@ -93,22 +163,6 @@ function handleClickBtnAddVeloMobile(veloMobileToUpdate){
       });
   }
 
-  // Programmation asynchrone : le code suivant ne va s'exécuter qu'après le premier chargement (render) du composant (ici ProductsPage)
-  useEffect(() => {
-    console.log(`Appel du service qui va aller charger les données`);
-    RemoteData.loadVelosMobiles()
-      .then((remoteVelosMobiles) => {
-        console.log(`remoteVelosMobiles : `, remoteVelosMobiles);
-        // Modification du state qui va impliquer un rechargement de la vue
-        // c'est à dire le rappel de render
-        setVelosMobiles(remoteVelosMobiles);
-      })
-      .catch(error => {
-        console.log(`Erreur attrapée dans useEffect : `, error);
-        setErrorMsg(error.toString());
-      });
-  }, [])
-  console.log(`dans ProductsPage`);
 
   return (
     <>
@@ -123,19 +177,18 @@ function handleClickBtnAddVeloMobile(veloMobileToUpdate){
             {isLoggedIn && addingVeloMobile && (
                 <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
               )}
-              {errorMsg && (
-                <h3 className="text-danger">{errorMsg}</h3>
-              )}
+
           </div>
           <div className="formImage">
-                  {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
+              {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
               {velosMobiles && !addingVeloMobile && velosMobiles.map((veloMobile) =>
-              <VeloMobile key={veloMobile.id}
+              <VeloMobile key= 
+              {veloMobile.id}
               veloMobile={veloMobile} 
               handleClickDeleteVeloMobile={handleClickDeleteVeloMobile}
               handleClickBtnUpdateVeloMobile={handleClickBtnUpdateVeloMobile} 
               handleSubmitFormPutVeloMobile={handleSubmitFormPutVeloMobile}
-              veloMobileToUpdate={(veloMobile.id == veloMobileToUpdate)}
+              upVeloMobile={(veloMobile.id == veloMobileToUp)}
               />)}
             
           </div>

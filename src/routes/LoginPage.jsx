@@ -1,8 +1,10 @@
+import { useState } from "react";
 import RemoteData from "../services/RemoteData";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useOutletContext();
+  const [errorMsg, setErrorMsg] = useState(false);
   const navigate = useNavigate();
   return (
     <section>
@@ -28,18 +30,26 @@ const LoginPage = () => {
               setIsLoggedIn(data);
               if (data) {
                 console.log(`redirection vers la page d'accueil`);
+                setErrorMsg(false);
                 navigate('/');
-              }
+              }else setErrorMsg(true);
             });
 
         }}
       >
-        <label htmlFor="login">Identifiant</label>
-        <input type="text" id="login" name="login" />
+      <div>
+        <label htmlFor="login" className="form-label">Identifiant</label>
+        <input type="text" id="login" name="login" className="form-control" />
+      </div> 
+      <div>
         <label htmlFor="pwd">Mot de passe</label>
         <input type="text" id="pwd" name="pwd" />
+      </div>
         <button type="submit">Envoyer</button>
       </form>
+        {errorMsg && (
+        <p className="text-danger h3 align-center">Identifiant et/ou mots de passe erronés. Veuillez resaisir à nouveau</p>
+      )}
     </section>
 
 

@@ -11,15 +11,8 @@ const HomePage = () => {
         <br />
         <h2>Le Choix Écologique et Pratique</h2>
         <br />  
-           <div id="slider-carousel"><Slider /></div>   
-              {/* <div className="d-flex justify-content-center mb-5">
-                <img
-                  id="vm1"
-                  src={`/images/velosmobiles/vm1.png`}
-                  alt=""
-                  className="img-fluid d-block"
-                />
-              </div> */}
+        <div id="slider-carousel"><Slider /></div>   
+             
         <div className="row justify-content-center">
           <div className="text-homePage col-md-6 col-sm-10 col-xs-10 py-3">
             <h2>Durabilité et Écologie</h2>
