@@ -76,7 +76,7 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
         </ul>
         {/*------------- Liens pour la navigation --------*/}
 
-        {/* icons dark mode et login/logout */}
+        {/* icons dark mode */}
 
         <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
           <li>
@@ -86,6 +86,7 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
               <IoMoonSharp onClick={toggleMode} />
             )}
           </li>
+          {/* icons login/logout */}
           <li className="login-out-link" onClick={switchMenuBurgerClass}>
             <Link to={pathLogged}>
               {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
