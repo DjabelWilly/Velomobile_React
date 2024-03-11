@@ -3,8 +3,14 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { RiHome2Line } from "react-icons/ri";
 
+
+
 const AdminVeloPage = () => {
+
+
   return (
+
+
     <>
       <div className="nav-admin">
         <div className="title">
@@ -44,10 +50,9 @@ const AdminVeloPage = () => {
                 <td> </td>
                 <td> </td>
                 <div className="d-flex justify-content-end">
-                  <Link to={""}>
+                  <Link to={"admin/velo/putForm"}>
                     <button className="btn btn-primary mx-2">Modifier</button>
                   </Link>
-
                   <button className="btn btn-danger">Supprimer</button>
                 </div>
               </tr>

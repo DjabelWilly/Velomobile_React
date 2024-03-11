@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import logo from '../assets/logovelomobile.png';
 import { IoMoonSharp } from "react-icons/io5";
 import { GoSun } from "react-icons/go";
+import { CiLogin } from "react-icons/ci";
+import { CiLogout } from "react-icons/ci";
 
 
 const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
@@ -20,12 +22,19 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
  * @param {*} login 
  * @returns 
  */  
-  function logInOutLink(login) {
+ function logInOutLink(login) {
     if (login) {
-        return (<>Déconnexion</>);
-        } else return (<>Connexion</>);
-     }
-
+      return (
+        <>
+          <CiLogout />
+        </>
+      );
+    } else return (
+      <>
+        <CiLogin />
+      </>
+    );
+  }
 /**
  * Function qui modifie l'état switchMenuBurger et a un impact sur l'attribut className de Nav
  */
@@ -66,7 +75,7 @@ function switchMenuBurgerClass(){
             </li>
           </ul>
           {/*------------- Liens définis pour la navigation --------*/}
-          <ul className="col-3 nav-option">
+          <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
             <li>
               {/* <ImSwitch onClick={toggleMode} />{" "}
               {modeSombre === "sombre" ? <GoSun /> : <IoMoonSharp />} */}
