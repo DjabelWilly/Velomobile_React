@@ -90,10 +90,10 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
               </Link>
             </li>
           </ul>
-        </div>
-      </nav>
+        
+        </nav>
     </header>
-  );
-};
+  )
+}
 
 export default Header;
