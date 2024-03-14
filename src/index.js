@@ -1,32 +1,30 @@
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import Admin from './routes/AdminPage';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import Admin from "./AdminPage";
 import {
   createBrowserRouter,
   RouterProvider,
-  Navigate
+  Navigate,
 } from "react-router-dom";
-import ProductsPage from './routes/ProductsPage';
-import HomePage from './routes/HomePage';
-import ErrorPage from './routes/ErrorPage';
-import LoginPage from './routes/LoginPage';
-import LogoutPage from './routes/LogoutPage';
-import HistoirePage from './routes/HistoirePage';
-import MadeInLozerePage from './routes/MadeInLozerePage';
-import LandingPagePub from './routes/LandingPagePub';
-import LandingPagePluie from './routes/LandingPagePluie';
-import ShowroomPage from './routes/ShowroomPage';
-import AdminVeloPage from './routes/AdminVeloPage';
-import AdminPage from './routes/AdminPage';
-import AdminUsersPage from './routes/AdminUsersPage';
-import AdminFormVeloPage from './routes/AdminFormVeloPage';
-import AdminFormUsersPage from './routes/AdminFormUsersPage';
-import 'bootstrap/dist/css/bootstrap.css';
-import './sass/custom.scss';
-
+import ProductsPage from "./routes/ProductsPage";
+import HomePage from "./routes/HomePage";
+import ErrorPage from "./routes/ErrorPage";
+import LoginPage from "./routes/LoginPage";
+import LogoutPage from "./routes/LogoutPage";
+import HistoirePage from "./routes/HistoirePage";
+import MadeInLozerePage from "./routes/MadeInLozerePage";
+import LandingPagePub from "./routes/LandingPagePub";
+import LandingPagePluie from "./routes/LandingPagePluie";
+import ShowroomPage from "./routes/ShowroomPage";
+import AdminVeloPage from "./routes/AdminVeloPage";
+import AdminPage from "./AdminPage";
+import AdminUsersPage from "./routes/AdminUsersPage";
+import AdminFormVeloPage from "./routes/AdminFormVeloPage";
+import AdminFormUsersPage from "./routes/AdminFormUsersPage";
+import "bootstrap/dist/css/bootstrap.css";
+import "./sass/custom.scss";
 
 const router = createBrowserRouter([
   {
@@ -80,9 +78,8 @@ const router = createBrowserRouter([
   {
     path: "/admin/",
     element: <AdminPage />,
-    errorElement: <ErrorPage />,
+
     children: [
-      
       {
         path: "velo",
         element: <AdminVeloPage />,
@@ -102,18 +99,15 @@ const router = createBrowserRouter([
       {
         path: "users/form",
         element: <AdminFormUsersPage />,
-      }
-    ]
+      },
+    ],
   },
   {
     path: "/",
-    element: <Navigate to="/public/" replace/>,
-  }
+    element: <Navigate to="/public/" replace />,
+  },
+]);
 
-
-
-    ]);
-  
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
