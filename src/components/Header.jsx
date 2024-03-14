@@ -13,7 +13,7 @@ import { CiLogout } from "react-icons/ci";
 const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
   //Function useSate () Etat initial "inactive"
   const [switchMenuBurger, setSwitchMenuBurger] = useState("inactive");
-  let pathLogged = isLoggedIn ? "/logout" : "/login";
+  let pathLogged = isLoggedIn ? "/public/logout" : "/public/login";
 
   /**
    * Function qui modifie l'état login et a un impact sur l'attribut
@@ -46,39 +46,36 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
     else setSwitchMenuBurger("active");
   }
 
-  return (
-    <header>
-      <div className="wrap-nav">
-        <Link to={"/"}>
-          <img src={logo} alt="Logo vélomobile - retour accueil" />
-        </Link>
-      </div>
-      <div id="icons" onClick={switchMenuBurgerClass}></div>
+    return (
+      <header>
+        <div className="wrap-nav">
+          <Link to={"/public/home"}>
+            <img src={logo} alt="Logo vélomobile - retour accueil" />
+          </Link>
+        </div>
+        <div id="icons" onClick={switchMenuBurgerClass}></div>
 
-      <nav id="nav" className={switchMenuBurger}>
-        <ul className="col-9 mt-4">
-          {/*------------- Lien pour la navigation --------*/}
-          <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/home`}>Accueil</Link>
-          </li>
-          <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/products`}>Modèles</Link>
-          </li>
-          <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/madeinlozere`}>Made in Lozère</Link>
-          </li>
-          <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/histoire`}>Histoire</Link>
-          </li>
-          <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/showroom`}>Showroom</Link>
-          </li>
-        </ul>
-        {/*------------- Liens pour la navigation --------*/}
-
-        {/* icons dark mode */}
-        <div className="d-flex justify-content-end">
-          <ul className="col-3 nav-option d-flex justify-content-center mt-4">
+        <nav id="nav" className={switchMenuBurger}>
+          <ul className="col-9 mt-4">
+            {/*------------- Lien à définir pour la navigation --------*/}
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={"/public/home"}>Accueil</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/products`}>Modèles</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/madeinlozere`}>Made in Lozère</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/histoire`}>Histoire</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/showroom`}>Showroom</Link>
+            </li>
+          </ul>
+          {/*------------- Liens définis pour la navigation --------*/}
+          <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
             <li>
               {modeSombre === "sombre" ? (
                 <GoSun className="sun-icon" onClick={toggleMode} />

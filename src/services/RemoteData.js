@@ -44,6 +44,12 @@ export default class RemoteData {
         return false;
       })
   }
+  
+    /**
+   * Supprime un vélomobile en bd via une requête http utilisant le verbe DELETE
+   * @param {*} id 
+   * @returns Promise<deleted Object veloMobile>
+   */
   static deleteVeloMobile(id) {
     return fetch(`${RemoteData.url}velosMobiles/${id}`,
       {
@@ -89,8 +95,13 @@ export default class RemoteData {
         console.log(`data reçue après le post : `, data);
         return data;
       })
-
   }
+
+    /**
+  * 
+  * @param {*} newVeloMobile 
+  * @returns 
+  */
   static putVeloMobile(updatedVeloMobile) {
     console.log(`DansputVeloMobile `, updatedVeloMobile);
     return fetch(`${RemoteData.url}velosMobiles/${updatedVeloMobile.id}`, {

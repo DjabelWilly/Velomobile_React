@@ -10,8 +10,8 @@ const LoginPage = () => {
     <section>
       <br />
       <h2>Identification</h2>
-      <br />
-      <form
+      
+      <form className="form"
         onSubmit={(event) => {
           console.log(`Formulaire soumis`);
           event.preventDefault();
@@ -31,7 +31,7 @@ const LoginPage = () => {
               if (data) {
                 console.log(`redirection vers la page d'accueil`);
                 setErrorMsg(false);
-                navigate('/admin');
+                navigate('/admin/');
               }else setErrorMsg(true);
             });
 
@@ -43,7 +43,7 @@ const LoginPage = () => {
       </div> 
       <div>
         <label htmlFor="pwd">Mot de passe</label>
-        <input type="password" id="pwd" name="pwd" />
+        <input type="password" id="pwd" name="pwd" className="form-control"/>
       </div>
         <button type="submit">Envoyer</button>
       </form>
