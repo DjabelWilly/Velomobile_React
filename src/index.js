@@ -104,10 +104,10 @@ const router = createBrowserRouter([
         element: <AdminFormUsersPage />,
       }
     ]
-  },
+   },
   {
     path: "/",
-    element: <Navigate to="/public/" replace/>,
+    element: <Navigate to="/public" replace/>,
   }
 
 

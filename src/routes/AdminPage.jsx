@@ -4,6 +4,7 @@ import "../App.css";
 import { RiHome2Line } from "react-icons/ri";
 
 const AdminPage = () => {
+  
   return (
     <>
       <div className="nav-admin">

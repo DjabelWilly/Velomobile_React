@@ -49,7 +49,7 @@ function switchMenuBurgerClass(){
     return (
       <header>
         <div className="wrap-nav">
-          <Link to={"/public/home"}>
+          <Link to={"/public"}>
             <img src={logo} alt="Logo vélomobile - retour accueil" />
           </Link>
         </div>
@@ -59,7 +59,7 @@ function switchMenuBurgerClass(){
           <ul className="col-9 mt-4">
             {/*------------- Lien à définir pour la navigation --------*/}
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={"/public/home"}>Accueil</Link>
+              <Link to={`/public`}>Accueil</Link>
             </li>
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
               <Link to={`/public/products`}>Modèles</Link>
