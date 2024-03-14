@@ -46,54 +46,56 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
     else setSwitchMenuBurger("active");
   }
 
-    return (
-      <header>
-        <div className="wrap-nav">
-          <Link to={"/public/home"}>
-            <img src={logo} alt="Logo vélomobile - retour accueil" />
-          </Link>
-        </div>
-        <div id="icons" onClick={switchMenuBurgerClass}></div>
+  return (
+    <header>
+      <div className="wrap-nav">
+        <Link to={"/public"}>
+          <img src={logo} alt="Logo vélomobile - retour accueil" />
+        </Link>
+      </div>
+      <div id="icons" onClick={switchMenuBurgerClass}></div>
 
-        <nav id="nav" className={switchMenuBurger}>
-          <ul className="col-9 mt-4">
-            {/*------------- Lien à définir pour la navigation --------*/}
-            <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={"/public/home"}>Accueil</Link>
-            </li>
-            <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/public/products`}>Modèles</Link>
-            </li>
-            <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/public/madeinlozere`}>Made in Lozère</Link>
-            </li>
-            <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/public/histoire`}>Histoire</Link>
-            </li>
-            <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/public/showroom`}>Showroom</Link>
-            </li>
-          </ul>
-          {/*------------- Liens définis pour la navigation --------*/}
-          <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
-            <li>
-              {modeSombre === "sombre" ? (
-                <GoSun className="sun-icon" onClick={toggleMode} />
-              ) : (
-                <IoMoonSharp className="moon-icon" onClick={toggleMode} />
-              )}
-            </li>
-            {/* icons login/logout */}
-            <li className="login-out-link" onClick={switchMenuBurgerClass}>
-              <Link to={pathLogged}>
-                {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
-              </Link>
-            </li>
-          </ul>
-        
-        </nav>
+      <nav id="nav" className={switchMenuBurger}>
+        <ul className="col-9 mt-4">
+          {/*------------- Lien à définir pour la navigation --------*/}
+          <li className="navbar-item" onClick={switchMenuBurgerClass}>
+            <Link to={"/public"}>Accueil</Link>
+          </li>
+          <li className="navbar-item" onClick={switchMenuBurgerClass}>
+            <Link to={`/public/products`}>Modèles</Link>
+          </li>
+          <li className="navbar-item" onClick={switchMenuBurgerClass}>
+            <Link to={`/public/madeinlozere`}>Made in Lozère</Link>
+          </li>
+          <li className="navbar-item" onClick={switchMenuBurgerClass}>
+            <Link to={`/public/histoire`}>Histoire</Link>
+          </li>
+          <li className="navbar-item" onClick={switchMenuBurgerClass}>
+            <Link to={`/public/showroom`}>Showroom</Link>
+          </li>
+        </ul>
+        {/*------------- Liens définis pour la navigation --------*/}
+        {/* icons dark mode */}
+        <div className="d-flex justify-content-end">
+        <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
+          <li>
+            {modeSombre === "sombre" ? (
+              <GoSun className="sun-icon" onClick={toggleMode} />
+            ) : (
+              <IoMoonSharp className="moon-icon" onClick={toggleMode} />
+            )}
+          </li>
+          {/* icons login/logout */}
+          <li className="login-out-link" onClick={switchMenuBurgerClass}>
+            <Link to={pathLogged}>
+              {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
+            </Link>
+          </li>
+        </ul>
+        </div>
+      </nav>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

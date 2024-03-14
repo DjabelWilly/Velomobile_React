@@ -7,11 +7,12 @@ const LoginPage = () => {
   const [errorMsg, setErrorMsg] = useState(false);
   const navigate = useNavigate();
   return (
-    <section>
+    <section className="container col-7 col-sm-4 col-md-4 col-lg-3">
       <br />
       <h2>Identification</h2>
-      
-      <form className="form"
+
+      <form
+        className="form"
         onSubmit={(event) => {
           console.log(`Formulaire soumis`);
           event.preventDefault();
@@ -24,36 +25,47 @@ const LoginPage = () => {
           console.log(`login`, login, "pwd", pwd);
           //event.target.reset();
           // Vérification du l'utilisateur via un service
-          RemoteData.isLogged(login, pwd)
-            .then((data) => {
-              console.log(`data ?`, data);
-              setIsLoggedIn(data);
-              if (data) {
-                console.log(`redirection vers la page d'accueil`);
-                setErrorMsg(false);
-                navigate('/admin/');
-              }else setErrorMsg(true);
-            });
-
+          RemoteData.isLogged(login, pwd).then((data) => {
+            console.log(`data ?`, data);
+            setIsLoggedIn(data);
+            if (data) {
+              console.log(`redirection vers la page d'accueil`);
+              setErrorMsg(false);
+              navigate("/admin/");
+            } else setErrorMsg(true);
+          });
         }}
       >
-      <div>
-        <label htmlFor="login" className="form-label">Identifiant</label>
-        <input type="text" id="login" name="login" className="form-control" />
-      </div> 
-      <div>
-        <label htmlFor="pwd">Mot de passe</label>
-        <input type="password" id="pwd" name="pwd" className="form-control"/>
-      </div>
-        <button type="submit">Envoyer</button>
+        <div className="mb-4">
+          <label htmlFor="login" className="form-label">
+            Identifiant
+          </label>
+          <input type="text" id="login" name="login" className="form-control" />
+        </div>
+        <div className="mt-3">
+          <label className="mb-2" htmlFor="pwd">
+            Mot de passe
+          </label>
+          <input type="password" id="pwd" name="pwd" className="form-control" />
+        </div>
+        <button
+          className="form-button btn btn-light mx-auto my-3"
+          type="submit"
+          style={{
+            width: "auto",
+            border: "1px solid grey",
+          }}
+        >
+          Envoyer
+        </button>
       </form>
-        {errorMsg && (
-        <p className="text-danger h3 align-center">Identifiant et/ou mots de passe erronés. Veuillez resaisir à nouveau</p>
+      {errorMsg && (
+        <p className="text-danger h3 align-center">
+          Identifiant et/ou mots de passe erronés. Veuillez resaisir à nouveau
+        </p>
       )}
     </section>
-
-
   );
-}
+};
 
 export default LoginPage;
