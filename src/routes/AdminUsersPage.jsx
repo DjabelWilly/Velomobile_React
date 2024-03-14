@@ -21,8 +21,8 @@ const AdminUsersPage = () => {
         <div className="container-fluid d-flex mx-0 px-0">
           <div className="sidebar col-2">
             <div className="container d-flex row mt-5">
-              <Link to={"/admin/velo"}>Vélomobile</Link>
-              <Link to={"/admin/users"}>Utilisateurs</Link>
+              <Link to={"/velo"}>Vélomobile</Link>
+              <Link to={"/users"}>Utilisateurs</Link>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const AdminUsersPage = () => {
               </tbody>
             </table>
             <div className="d-flex justify-content-end">
-              <Link to={"/admin/users/form"}>
+              <Link to={"/users/form"}>
                 <button className="btn btn-secondary my-5 mx-2">
                   Ajouter utilisateur
                 </button>

@@ -3,9 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Admin from './routes/AdminPage';
 import {
   createBrowserRouter,
   RouterProvider,
+  Navigate
 } from "react-router-dom";
 import ProductsPage from './routes/ProductsPage';
 import HomePage from './routes/HomePage';
@@ -28,7 +30,7 @@ import './sass/custom.scss';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/public",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
@@ -74,35 +76,44 @@ const router = createBrowserRouter([
         element: <LogoutPage />,
       },
     ],
-
-   },
+  },
   {
-    path: "admin",
+    path: "/admin/",
     element: <AdminPage />,
+    errorElement: <ErrorPage />,
+    children: [
+      
+      {
+        path: "velo",
+        element: <AdminVeloPage />,
+      },
+      {
+        path: "users",
+        element: <AdminUsersPage />,
+      },
+      {
+        path: "velo/createForm",
+        element: <AdminFormVeloPage />,
+      },
+      {
+        path: "velo/putForm",
+        element: <AdminFormVeloPage />,
+      },
+      {
+        path: "users/form",
+        element: <AdminFormUsersPage />,
+      }
+    ]
   },
   {
-    path: "admin/velo",
-    element: <AdminVeloPage />,
-  },
-  {
-    path: "admin/users",
-    element: <AdminUsersPage />,
-  },
-  {
-    path: "admin/velo/createForm",
-    element: <AdminFormVeloPage />,
-  },
-  {
-    path: "admin/velo/putForm",
-    element: <AdminFormVeloPage />,
-  },
-  {
-    path: "admin/users/form",
-    element: <AdminFormUsersPage />,
+    path: "/",
+    element: <Navigate to="/public/" replace/>,
   }
-  
-]);
 
+
+
+    ]);
+  
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
