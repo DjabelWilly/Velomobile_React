@@ -17,7 +17,7 @@ const AdminVeloPage = () => {
           <h2>back office Velomobile</h2>
         </div>
         <div>
-          <Link to={"/"}>
+          <Link to={"/pub"}>
             <RiHome2Line size={24} />
           </Link>
         </div>
@@ -50,7 +50,7 @@ const AdminVeloPage = () => {
                 <td> </td>
                 <td> </td>
                 <div className="d-flex justify-content-end">
-                  <Link to={"admin/velo/putForm"}>
+                  <Link to={"/velo/putForm"}>
                     <button className="btn btn-primary mx-2">Modifier</button>
                   </Link>
                   <button className="btn btn-danger">Supprimer</button>
@@ -59,7 +59,7 @@ const AdminVeloPage = () => {
             </tbody>
           </table>
           <div className="d-flex justify-content-end">
-            <Link to={"/admin/velo/form"}>
+            <Link to={"admin/velo/form"}>
               <button className="btn btn-secondary my-5 mx-2">
                 Ajouter vélomobile
               </button>

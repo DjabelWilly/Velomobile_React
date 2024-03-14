@@ -15,7 +15,7 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
 
 //Function useSate () Etat initial "inactive"
   const [switchMenuBurger, setSwitchMenuBurger] = useState("inactive");
-  let pathLogged = isLoggedIn ? '/logout' : '/login'
+  let pathLogged = isLoggedIn ? '/public/logout' : '/public/login'
 
 /**
  * Function qui modifie l'état login et a un impact sur l'attribut 
@@ -49,7 +49,7 @@ function switchMenuBurgerClass(){
     return (
       <header>
         <div className="wrap-nav">
-          <Link to={"/"}>
+          <Link to={"/public/home"}>
             <img src={logo} alt="Logo vélomobile - retour accueil" />
           </Link>
         </div>
@@ -59,19 +59,19 @@ function switchMenuBurgerClass(){
           <ul className="col-9 mt-4">
             {/*------------- Lien à définir pour la navigation --------*/}
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/home`}>Accueil</Link>
+              <Link to={"/public/home"}>Accueil</Link>
             </li>
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/products`}>Modèles</Link>
+              <Link to={`/public/products`}>Modèles</Link>
             </li>
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/madeinlozere`}>Made in Lozère</Link>
+              <Link to={`/public/madeinlozere`}>Made in Lozère</Link>
             </li>
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/histoire`}>Histoire</Link>
+              <Link to={`/public/histoire`}>Histoire</Link>
             </li>
             <li className="navbar-item" onClick={switchMenuBurgerClass}>
-              <Link to={`/showroom`}>Showroom</Link>
+              <Link to={`/public/showroom`}>Showroom</Link>
             </li>
           </ul>
           {/*------------- Liens définis pour la navigation --------*/}

@@ -37,7 +37,7 @@ import FormPutVeloMobile from "./FormPutVeloMobile";
 const VeloMobile = (props) => {
   const [isLoggedIn, setIsLoggedIn] = useOutletContext();
   return (
-    <section className="section-velomobile d-flex justify-content-between gap-3">
+    <section className="section-velomobile d-flex justify-content-between gap-1">
       <h3 className="h2">{props.veloMobile.model}</h3>
       {isLoggedIn &&
         (
@@ -48,7 +48,7 @@ const VeloMobile = (props) => {
             {!props.upVeloMobile && (
               <>
                 <img id="vm2" className="mb-5" src={`/images/velosmobiles/${props.veloMobile.photo}`} alt="" />
-                <p className="mb-5">{props.veloMobile.description}</p>
+                <p className="mb-2">{props.veloMobile.description}</p>
                 <section className="admin-bar w-25">
                   <button
                     onClick={() => {
@@ -66,7 +66,9 @@ const VeloMobile = (props) => {
         )}
       {!isLoggedIn && (<>
         <img id="vm2"  src={`/images/velosmobiles/${props.veloMobile.photo}`} alt="" className="mb-5" />
-        <p className="mb-5">{props.veloMobile.description}</p>
+        <p className="mb-2" >{props.veloMobile.description}</p>
+        
+        <p className="mb-2">{props.veloMobile.weight}</p>
       </>)
       }
 
