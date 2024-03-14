@@ -31,7 +31,7 @@ const LoginPage = () => {
               if (data) {
                 console.log(`redirection vers la page d'accueil`);
                 setErrorMsg(false);
-                navigate('/');
+                navigate('/admin');
               }else setErrorMsg(true);
             });
 
@@ -43,7 +43,7 @@ const LoginPage = () => {
       </div> 
       <div>
         <label htmlFor="pwd">Mot de passe</label>
-        <input type="text" id="pwd" name="pwd" />
+        <input type="password" id="pwd" name="pwd" />
       </div>
         <button type="submit">Envoyer</button>
       </form>

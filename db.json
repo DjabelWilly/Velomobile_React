@@ -3,8 +3,8 @@
     {
       "id": "1",
       "model": "lvf",
-      "description": "Le vélo mobile français qui a fait preuves",
-      "weight": "",
+      "description": "Le vélo mobile français qui a fait ses preuves",
+      "weight": "78",
       "photo": "vm1.png"
     },
     {
@@ -15,10 +15,10 @@
       "weight": 22
     },
     {
-      "id": "e320",
-      "model": "ljk",
-      "description": "le velomobile 100% recyclé",
-      "weight": "67KG",
+      "id": "2fb8",
+      "model": "velo",
+      "description": "le top ",
+      "weight": "",
       "photo": ""
     }
   ],

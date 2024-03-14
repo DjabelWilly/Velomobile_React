@@ -24,7 +24,6 @@ header {
     align-items: center;
     align-content: center;
 
-
     img {
       min-width: 40%;
       max-width: 80%;
@@ -43,13 +42,11 @@ header {
 
 li {
   list-style: none;
- 
 }
 
 a {
   color: #000583;
   text-decoration: none;
-
 }
 
 a:hover {
@@ -115,10 +112,27 @@ nav ul {
   }
 
   a {
-    font-size: 15px;
+    font-size: 10px;
     color: #000583;
   }
   a:hover {
     color: rgb(233, 7, 7);
   }
+}
+
+.moon-icon {
+  color: #000583;
+  cursor: pointer;
+}
+
+.moon-icon:hover {
+  color: rgb(233, 7, 7);
+}
+
+.sun-icon {
+  cursor: pointer;
+}
+
+.sun-icon:hover {
+  color: rgb(233, 7, 7);
 }

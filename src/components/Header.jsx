@@ -10,7 +10,6 @@ import { GoSun } from "react-icons/go";
 import { CiLogin } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
 
-
 const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
   //Function useSate () Etat initial "inactive"
   const [switchMenuBurger, setSwitchMenuBurger] = useState("inactive");
@@ -28,11 +27,12 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
           <CiLogout />
         </>
       );
-    } else return (
-      <>
-        <CiLogin />
-      </>
-    );
+    } else
+      return (
+        <>
+          <CiLogin />
+        </>
+      );
   }
 
   /**
@@ -77,22 +77,23 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
         {/*------------- Liens pour la navigation --------*/}
 
         {/* icons dark mode */}
-
-        <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
-          <li>
-            {modeSombre === "sombre" ? (
-              <GoSun onClick={toggleMode} />
-            ) : (
-              <IoMoonSharp onClick={toggleMode} />
-            )}
-          </li>
-          {/* icons login/logout */}
-          <li className="login-out-link" onClick={switchMenuBurgerClass}>
-            <Link to={pathLogged}>
-              {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
-            </Link>
-          </li>
-        </ul>
+        <div className="d-flex justify-content-end">
+          <ul className="col-3 nav-option d-flex justify-content-center mt-4">
+            <li>
+              {modeSombre === "sombre" ? (
+                <GoSun className="sun-icon" onClick={toggleMode} />
+              ) : (
+                <IoMoonSharp className="moon-icon" onClick={toggleMode} />
+              )}
+            </li>
+            {/* icons login/logout */}
+            <li className="login-out-link" onClick={switchMenuBurgerClass}>
+              <Link to={pathLogged}>
+                {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
   );
