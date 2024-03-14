@@ -7,25 +7,6 @@ import { RiHome2Line } from "react-icons/ri";
 const AdminUsersPage = () => {
     return (
       <>
-        <div className="nav-admin">
-          <div className="title">
-            <h2>back office Utilisateurs</h2>
-          </div>
-          <div>
-            <Link to={"/"}>
-              <RiHome2Line size={24} />
-            </Link>
-          </div>
-        </div>
-
-        <div className="container-fluid d-flex mx-0 px-0">
-          <div className="sidebar col-2">
-            <div className="container d-flex row mt-5">
-              <Link to={"/velo"}>Vélomobile</Link>
-              <Link to={"/users"}>Utilisateurs</Link>
-            </div>
-          </div>
-
           <div className="col align-items-center mx-3 py-5">
             <table class="table table-striped">
               <thead>
@@ -67,7 +48,6 @@ const AdminUsersPage = () => {
               </Link>
             </div>
           </div>
-        </div>
       </>
     );
 };
