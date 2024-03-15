@@ -13,7 +13,7 @@ const AdminPage = () => {
         </Link>
       </div>
       <div className="container d-flex justify-content-center my-4">
-        <h2>bienvenue dans le back office</h2>
+        <h2>Bienvenue dans le Back Office</h2>
       </div>
 
       <div className="container admin-home d-flex justify-content-evenly align-items-center">

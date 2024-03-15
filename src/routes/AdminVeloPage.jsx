@@ -176,14 +176,12 @@ const AdminVeloPage = () => {
   
       <div className="modeles">
         <div>
-          {errorMsg}
+          {/* {errorMsg} */}
           {isLoggedIn && (
             <button
               onClick={handleClickBtnAddVeloMobile}
               className="btn btn-success mb-5"
-              id="add-velomobile"
-            >
-              Ajouter un vélomobile
+              id="add-velomobile"> Ajouter un vélomobile
             </button>
           )}
           {isLoggedIn && addingVeloMobile && (
