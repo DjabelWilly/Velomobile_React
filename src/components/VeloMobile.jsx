@@ -3,8 +3,8 @@ import FormPutVeloMobile from "./FormPutVeloMobile";
 
 
 
-=======
-   return (
+
+//   return (
 //     <section>
 //       <h3>Modèle : {props.veloMobile.model}</h3>
 //       {isLoggedIn &&
