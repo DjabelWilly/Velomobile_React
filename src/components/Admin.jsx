@@ -16,7 +16,7 @@ function Admin({isLoggedIn}) {
           <h2>back office Velomobile</h2>
         </div>
         <div>
-          <Link to={"/"}>
+          <Link to={"/public"}>
             <RiHome2Line size={24} />
           </Link>
         </div>

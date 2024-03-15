@@ -171,7 +171,9 @@ const AdminVeloPage = () => {
 
   return (
     <>
-      <h2>Produits</h2>
+ <div className="adminTitle">
+      <h2 className="produitTitle">Produits</h2>
+  
       <div className="modeles">
         <div>
           {errorMsg}
@@ -191,7 +193,6 @@ const AdminVeloPage = () => {
           )}
         </div>
         <div className="formImage">
-          {/* Affichage de la listes des vélos mobiles sous condition que velosMobiles est "truely" */}
           {velosMobiles &&
             !addingVeloMobile &&
             velosMobiles.map((veloMobile) => (
@@ -206,7 +207,9 @@ const AdminVeloPage = () => {
             ))}
         </div>
       </div>
+  </div>    
     </>
+  
   );
 };
 
