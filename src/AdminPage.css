@@ -1,0 +1,12 @@
+.adminTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+.produitTitle{
+    text-align: center;
+}
+
+.section-velomobile{
+    padding: 25px;
+} 

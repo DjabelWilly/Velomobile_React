@@ -35,6 +35,41 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
       );
   }
 
+
+    return (
+      <header>
+        <div className="wrap-nav">
+          <Link to={"/public"}>
+            <img src={logo} alt="Logo vélomobile - retour accueil" />
+          </Link>
+        </div>
+        <div id="icons" onClick={switchMenuBurgerClass}></div>
+
+        <nav id="nav" className={switchMenuBurger}>
+          <ul className="col-9 mt-4">
+            {/*------------- Lien à définir pour la navigation --------*/}
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public`}>Accueil</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/products`}>Modèles</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/madeinlozere`}>Made in Lozère</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/histoire`}>Histoire</Link>
+            </li>
+            <li className="navbar-item" onClick={switchMenuBurgerClass}>
+              <Link to={`/public/showroom`}>Showroom</Link>
+            </li>
+          </ul>
+          {/*------------- Liens définis pour la navigation --------*/}
+          <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
+            <li>
+              {/* <ImSwitch onClick={toggleMode} />{" "}
+              {modeSombre === "sombre" ? <GoSun /> : <IoMoonSharp />} */}
+
   /**
    * Function qui modifie l'état switchMenuBurger et a un impact sur l'attribut className de Nav
    */
@@ -54,6 +89,7 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
         </Link>
       </div>
       <div id="icons" onClick={switchMenuBurgerClass}></div>
+
 
       <nav id="nav" className={switchMenuBurger}>
         <ul className="col-9 mt-4">
