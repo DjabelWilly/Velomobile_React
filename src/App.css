@@ -45,6 +45,9 @@ li {
   max-width: 50vw;
 }
 
+#vm2{
+max-width:80vw;
+}
 .App-logo {
   height: 10vmin;
   pointer-events: none;
