@@ -16,7 +16,7 @@ function Admin({isLoggedIn}) {
           <h2>back office Velomobile</h2>
         </div>
         <div>
-          <Link to={"/public"}>
+          <Link to={"/"}>
             <RiHome2Line size={24} />
           </Link>
         </div>
@@ -29,7 +29,7 @@ function Admin({isLoggedIn}) {
             <Link to={"/admin/users"}>Utilisateurs</Link>
           </div>
         </div>
-        <Outlet context={[isLoggedIn,]} />
+        {/* <Outlet context={[isLoggedIn,]} /> */}
 
         {/* <div className="col align-items-center mx-3 py-5">
           <table class="table table-striped">

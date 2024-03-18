@@ -1,3 +1,6 @@
+import FormContact from "../components/FormContact";
+import Footer from "../components/Footer";
+
 const LandingPagePub = () => {
     return (
       <>
@@ -64,6 +67,7 @@ const LandingPagePub = () => {
             même lorsque les conditions météorologiques sont défavorables.
           </p>
         </div>
+
       </>
     );
 };

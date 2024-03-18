@@ -3,7 +3,11 @@ import VeloMobile from "../components/VeloMobile";
 import RemoteData from "../services/RemoteData";
 import { useOutletContext } from "react-router-dom";
 import FormPostVeloMobile from "../components/FormPostVeloMobile";
-//import AdminVeloPage from './AdminVeloPage';
+
+import { Link } from "react-router-dom";
+import "../App.css";
+import React from "react";
+import { RiHome2Line } from "react-icons/ri";
 
 /**
  * Composant fonction
@@ -171,41 +175,64 @@ const AdminVeloPage = () => {
 
   return (
     <>
- <div className="adminTitle">
-      <h2 className="produitTitle">Produits</h2>
-  
-      <div className="modeles">
-        <div>
-          {/* {errorMsg} */}
-          {isLoggedIn && (
-            <button
-              onClick={handleClickBtnAddVeloMobile}
-              className="btn btn-success mb-5"
-              id="add-velomobile"> Ajouter un vélomobile
-            </button>
-          )}
-          {isLoggedIn && addingVeloMobile && (
-            <FormPostVeloMobile
-              handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile}
-            />
-          )}
+       
+      <div className="nav-admin">
+        <div className="title">
+          <h2>Back Office Velomobile</h2>
         </div>
-        <div className="formImage">
-          {velosMobiles &&
-            !addingVeloMobile &&
-            velosMobiles.map((veloMobile) => (
-              <VeloMobile
-                key={veloMobile.id}
-                veloMobile={veloMobile}
-                handleClickDeleteVeloMobile={handleClickDeleteVeloMobile}
-                handleClickBtnUpdateVeloMobile={handleClickBtnUpdateVeloMobile}
-                handleSubmitFormPutVeloMobile={handleSubmitFormPutVeloMobile}
-                upVeloMobile={veloMobile.id == veloMobileToUp}
-              />
-            ))}
+        <div>
+          <Link to={"/"}>
+            <RiHome2Line size={24} />
+          </Link>
         </div>
       </div>
+
+      <div className="container-fluid d-flex mx-0 px-0">
+        <div className="sidebar col-2">
+          <div className="container d-flex row mt-5">
+            <Link to={"/admin/velo"}>Vélomobile</Link>
+            <Link to={"/admin/users"}>Utilisateurs</Link>
+          </div>
+        </div>
+        <div className="adminTitle col-10">
+          <h2 className="produitTitle">Produits</h2>
+      
+          <div className="modeles">
+            <div>
+              {errorMsg}
+              {isLoggedIn && (
+                <button
+                  onClick={handleClickBtnAddVeloMobile}
+                  className="btn btn-success mb-5"
+                  id="add-velomobile"> Ajouter un vélomobile
+                </button>
+              )}
+              {isLoggedIn && addingVeloMobile && (
+                <FormPostVeloMobile
+                  handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile}
+                />
+              )}
+            </div>
+            <div className="formImage">
+              {velosMobiles &&
+                !addingVeloMobile &&
+                velosMobiles.map((veloMobile) => (
+                  <VeloMobile
+                    key={veloMobile.id}
+                    veloMobile={veloMobile}
+                    handleClickDeleteVeloMobile={handleClickDeleteVeloMobile}
+                    handleClickBtnUpdateVeloMobile={handleClickBtnUpdateVeloMobile}
+                    handleSubmitFormPutVeloMobile={handleSubmitFormPutVeloMobile}
+                    upVeloMobile={veloMobile.id == veloMobileToUp}
+                  />
+                ))}
+            </div>
+          </div>
   </div>    
+  
+      </div>
+    
+ 
     </>
   
   );

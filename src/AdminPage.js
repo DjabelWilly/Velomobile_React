@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import Admin from "./components/Admin"
 import AdminVeloPage from "./routes/AdminVeloPage";
-const AdminPage = () => {
+const AdminPage = ({}) => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 

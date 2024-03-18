@@ -27,11 +27,12 @@ const LoginPage = () => {
           // Vérification du l'utilisateur via un service
           RemoteData.isLogged(login, pwd).then((data) => {
             console.log(`data ?`, data);
+            console.log(`on est connecté ?`, data);
             setIsLoggedIn(data);
             if (data) {
               console.log(`redirection vers la page d'accueil`);
               setErrorMsg(false);
-              navigate("/admin/");
+              navigate("/admin");
             } else setErrorMsg(true);
           });
         }}

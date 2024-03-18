@@ -1,3 +1,7 @@
+import FormContact from "../components/FormContact";
+import Footer from "../components/Footer";
+
+
 const LandingPagePluie = () => {
   return (
     <>

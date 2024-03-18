@@ -1,10 +1,22 @@
 import Slider from "../components/Slider";
+import Header from '../components/Header';
+import FormContact from "../components/FormContact";
 
-const HomePage = () => {
+
+const HomePage = ({toggleMode,modeSombre}) => {
+// const [modeSombre, setModeSombre] = useState("clair");
+
+//  function toggleMode() {
+//     modeSombre === "clair" ? setModeSombre("sombre") : setModeSombre("clair")
+    
+//   console.log('dans tooglemode')
+
   return (
     <>
-      <div className="container col-10">
+    <div > 
+      <div className= "container col-10">
         <br />
+      
         <h1 className=" d-flex justify-content-center mt-4">
           Le Velomobile Français
         </h1>
@@ -62,7 +74,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-    </>
+   </div> </>
+    
   );
 };
 

@@ -1,3 +1,5 @@
+import FormContact from "../components/FormContact";
+
 const MadeInLozerePage = () => {
   return (
     <>

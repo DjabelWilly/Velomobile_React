@@ -13,7 +13,7 @@ import { CiLogout } from "react-icons/ci";
 const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
   //Function useSate () Etat initial "inactive"
   const [switchMenuBurger, setSwitchMenuBurger] = useState("inactive");
-  let pathLogged = isLoggedIn ? "/public/logout" : "/public/login";
+  let pathLogged = isLoggedIn ? "/logout" : "/login";
 
   /**
    * Function qui modifie l'état login et a un impact sur l'attribut
@@ -49,7 +49,7 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
   return (
     <header>
       <div className="wrap-nav">
-        <Link to={"/public"}>
+        <Link to={"/"}>
           <img src={logo} alt="Logo vélomobile - retour accueil" />
         </Link>
       </div>
@@ -60,19 +60,19 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
         <ul className="col-9 mt-4">
           {/*------------- Lien à définir pour la navigation --------*/}
           <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={"/public"}>Accueil</Link>
+            <Link to={"/"}>Accueil</Link>
           </li>
           <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/public/products`}>Modèles</Link>
+            <Link to={`/products`}>Modèles</Link>
           </li>
           <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/public/madeinlozere`}>Made in Lozère</Link>
+            <Link to={`/madeinlozere`}>Made in Lozère</Link>
           </li>
           <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/public/histoire`}>Histoire</Link>
+            <Link to={`/histoire`}>Histoire</Link>
           </li>
           <li className="navbar-item" onClick={switchMenuBurgerClass}>
-            <Link to={`/public/showroom`}>Showroom</Link>
+            <Link to={`/showroom`}>Showroom</Link>
           </li>
         </ul>
         {/*------------- Liens définis pour la navigation --------*/}

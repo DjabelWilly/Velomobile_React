@@ -1,5 +1,5 @@
 import './App.css';
-import { Outlet} from "react-router-dom";
+import { Outlet, useLocation} from "react-router-dom";
 import { useState } from 'react';
 import './sass/header.scss'
 import Footer from './components/Footer';
@@ -22,24 +22,37 @@ function App()
 
 
   function toggleMode() {
-    modeSombre === "clair" ? setModeSombre("sombre") : setModeSombre("clair")
-   
-  
+    modeSombre === "clair" ? setModeSombre("sombre") : setModeSombre("clair")  
   console.log('dans tooglemode')
 }
+
+let url = useLocation();
+let isOnAdminPage = false
+
+if (url.pathname.includes("admin")) {
+   isOnAdminPage =true
+}
+// une conditionnelle qui check si l'utilisateur est sur la page admin
+// si oui on désactive le composant header
+// si non on le laisse afficher
+// if(url !== "admin") {
+//   maVarQuiChecksiIlestSurLaPageAdmin = 
+// }
 
 return (
 <div className={modeSombre}> 
   <div className='App'>
-      <Header isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>
+    {/** une conditionelle ou ternaire pour avoir le composant header en optionnel */}
+    {
+      isOnAdminPage ? null : <Header isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>
+    }
     <main>
       
-      <Outlet context={[isLoggedIn, setIsLoggedIn]} />
-      <FormContact />
+      <Outlet context={[isLoggedIn, setIsLoggedIn]} isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>
       
     </main>
 
-    <Footer />
+    
   </div>
 </div> 
 );

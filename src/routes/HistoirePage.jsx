@@ -1,3 +1,6 @@
+import Header from '../components/Header';
+import FormContact from "../components/FormContact";
+
 const HistoirePage = () => {
   return (
     <>

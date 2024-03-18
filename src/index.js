@@ -28,7 +28,7 @@ import "./sass/custom.scss";
 
 const router = createBrowserRouter([
   {
-    path: "/public",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
@@ -73,39 +73,38 @@ const router = createBrowserRouter([
         path: "logout",
         element: <LogoutPage />,
       },
-    ],
-  },
-  {
-    path: "/admin/",
-    element: <AdminPage />,
-
-    children: [
+       {
+        path: "admin",
+        element: <AdminPage />,
+       },
       {
-        path: "velo",
+        path: "admin/velo",
         element: <AdminVeloPage />,
       },
       {
-        path: "users",
+        path: "admin/users",
         element: <AdminUsersPage />,
       },
-      {
-        path: "velo/createForm",
-        element: <AdminFormVeloPage />,
-      },
-      {
-        path: "velo/putForm",
-        element: <AdminFormVeloPage />,
-      },
-      {
-        path: "users/form",
-        element: <AdminFormUsersPage />,
-      },
+      // {
+      //   path: "admin/velo/createForm",
+      //   element: <AdminFormVeloPage />,
+      // },
+      // {
+      //   path: "admin/velo/putForm",
+      //   element: <AdminFormVeloPage />,
+      // },
+      // {
+      //   path: "admin/users/form",
+      //   element: <AdminFormUsersPage />,
+      // },
+    
     ],
   },
-  {
-    path: "/",
-    element: <Navigate to="/public/" replace />,
-  },
+ 
+  // {
+  //   path: "/",
+  //   element: <Navigate to="/public/" replace />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

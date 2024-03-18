@@ -6,6 +6,13 @@
       "description": "Le vélo mobile sportif aux performances incroyables",
       "weight": "89",
       "photo": "vm2.png"
+    },
+    {
+      "id": "8e94",
+      "model": "iui",
+      "description": "ziiui",
+      "weight": "67KG",
+      "photo": ""
     }
   ],
   "users": [
