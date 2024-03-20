@@ -32,7 +32,7 @@ const LoginPage = () => {
             if (data) {
               console.log(`redirection vers la page d'accueil`);
               setErrorMsg(false);
-              navigate("/admin");
+              navigate("/admin/velo");
             } else setErrorMsg(true);
           });
         }}

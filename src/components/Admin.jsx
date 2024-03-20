@@ -1,10 +1,8 @@
-import AdminPage from "../AdminPage";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import React from "react";
 import { RiHome2Line } from "react-icons/ri";
 import "../App.css";
-import { Outlet } from "react-router-dom";
+import { CiLogout } from "react-icons/ci";
 
 
 function Admin() {
@@ -13,11 +11,11 @@ function Admin() {
     <>
       <div className="nav-admin">
         <div className="title">
-          <h2>back office Velomobile</h2>
+          <h2>Back Office Velomobile</h2>
         </div>
         <div>
           <Link to={"/"}>
-            <RiHome2Line size={24} />
+            <CiLogout  size={24} />
           </Link>
         </div>
       </div>
@@ -29,43 +27,6 @@ function Admin() {
             <Link to={"/admin/users"}>Utilisateurs</Link>
           </div>
         </div>
-        {/* <Outlet context={[isLoggedIn,]} /> */}
-
-        {/* <div className="col align-items-center mx-3 py-5">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">id</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Description</th>
-                <th scope="col">poids</th>
-                <th scope="col">image </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row"> </th>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <div className="d-flex justify-content-end">
-                  <Link to={"/velo/putForm"}>
-                    <button className="btn btn-primary mx-2">Modifier</button>
-                  </Link>
-                  <button className="btn btn-danger">Supprimer</button>
-                </div>
-              </tr>
-            </tbody>
-          </table>
-          <div className="d-flex justify-content-end">
-            <Link to={"/admin/velo/form"}>
-              <button className="btn btn-secondary my-5 mx-2">
-                Ajouter vélomobile
-              </button>
-            </Link>
-          </div>
-        </div> */}
       </div>
     </>
   );

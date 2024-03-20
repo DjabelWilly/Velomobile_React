@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 // import "../App.css";
 // import React from "react";
 import { RiHome2Line } from "react-icons/ri";
+import { CiLogout } from "react-icons/ci";
+
 
 /**
  * Composant fonction
@@ -185,7 +187,7 @@ const AdminVeloPage = () => {
         </div>
         <div>
           <Link to={"/logout"}>
-            <RiHome2Line size={24} />
+            <CiLogout size={24} />
           </Link>
         </div>
       </div>

@@ -1,4 +1,4 @@
-const FormPutVeloMobile = ({veloMobile, handleSubmitFormPostVeloMobile,handleSubmitFormPutVeloMobile }) => {
+const FormPutVeloMobile = ({veloMobile,handleSubmitFormPutVeloMobile }) => {
 console.log(`veloMobile dans FormPutVeloMobile`, veloMobile);
 
   return (

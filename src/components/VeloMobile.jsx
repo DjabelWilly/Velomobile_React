@@ -20,8 +20,7 @@ const VeloMobile = (props) => {
            </thead>
             <tbody>
               <tr>
-                <th scope="column"> 
-                
+                <th scope="column">                 
                   <img id="vm2"  src={`/images/velosmobiles/${props.veloMobile.photo}`} alt="foto de velomobile"  />
                 </th>
                 <td>
@@ -33,6 +32,7 @@ const VeloMobile = (props) => {
               </tr>
             </tbody>
       </table>  
+      
              {props.upVeloMobile && <FormPutVeloMobile veloMobile={props.veloMobile} handleSubmitFormPutVeloMobile={props.handleSubmitFormPutVeloMobile} />}
             {!props.upVeloMobile && (
               <>
