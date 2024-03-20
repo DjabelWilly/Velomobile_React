@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const ErrorPage = () => {
   const navigate = useNavigate();
   setTimeout(() => {
-    navigate("/public/");
+    navigate("/");
   }, 5000);
   return (
     <>

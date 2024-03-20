@@ -7,8 +7,6 @@ import FormContact from './components/FormContact';
 // import { Button } from 'bootstrap';
 import Header from './components/Header';
 
-
-
 /**
  * Gère l'affichage du composant App
  * App appelle ici le composant Title avec deux arguments sous la forme de clés/valeurs 
@@ -26,18 +24,15 @@ function App()
   console.log('dans tooglemode')
 }
 
+// une conditionnelle qui check si l'utilisateur est sur la page admin
+// si oui on désactive le composant header
+// si non on le laisse afficher
 let url = useLocation();
 let isOnAdminPage = false
 
 if (url.pathname.includes("admin")) {
    isOnAdminPage =true
 }
-// une conditionnelle qui check si l'utilisateur est sur la page admin
-// si oui on désactive le composant header
-// si non on le laisse afficher
-// if(url !== "admin") {
-//   maVarQuiChecksiIlestSurLaPageAdmin = 
-// }
 
 return (
 <div className={modeSombre}> 
@@ -48,10 +43,15 @@ return (
     }
     <main>
       
-      <Outlet context={[isLoggedIn, setIsLoggedIn]} isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>
-      
+      <Outlet context={[isLoggedIn, setIsLoggedIn]} isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>    
+    
+    {
+      isOnAdminPage ? null : <FormContact/>
+    }
     </main>
-
+     {
+      isOnAdminPage ? null : <Footer />
+    }
     
   </div>
 </div> 

@@ -25,7 +25,7 @@
 // }
 
 .sidebar {
-  height: 100vh;
+  max-height: max-content;
   background-color: rgb(146, 146, 146);
   a {
     text-align: center;

@@ -7,7 +7,7 @@ import "../App.css";
 import { Outlet } from "react-router-dom";
 
 
-function Admin({isLoggedIn}) {
+function Admin() {
 
   return (
     <>

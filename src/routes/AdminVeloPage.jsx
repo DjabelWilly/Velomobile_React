@@ -5,8 +5,8 @@ import { useOutletContext } from "react-router-dom";
 import FormPostVeloMobile from "../components/FormPostVeloMobile";
 
 import { Link } from "react-router-dom";
-import "../App.css";
-import React from "react";
+// import "../App.css";
+// import React from "react";
 import { RiHome2Line } from "react-icons/ri";
 
 /**
@@ -109,7 +109,7 @@ const AdminVeloPage = () => {
 
     RemoteData.putVeloMobile(updatedVeloMobile)
       .then((data) => {
-        console.log(`dans productsPage`, data);
+        console.log(`dans AdminVeloPage`, data);
       })
       .catch((error) => {
         console.error(error);
@@ -175,13 +175,16 @@ const AdminVeloPage = () => {
 
   return (
     <>
-       
+       {/**
+        * Affichage NavBar Administrateur
+        */
+       }
       <div className="nav-admin">
         <div className="title">
           <h2>Back Office Velomobile</h2>
         </div>
         <div>
-          <Link to={"/"}>
+          <Link to={"/logout"}>
             <RiHome2Line size={24} />
           </Link>
         </div>
@@ -194,10 +197,12 @@ const AdminVeloPage = () => {
             <Link to={"/admin/users"}>Utilisateurs</Link>
           </div>
         </div>
+        {/**
+         * Affichage des vélomobiles et bouton
+         */}
         <div className="adminTitle col-10">
           <h2 className="produitTitle">Produits</h2>
-      
-          <div className="modeles">
+                          <div className="modeles">
             <div>
               {errorMsg}
               {isLoggedIn && (

@@ -3,8 +3,6 @@ import VeloMobile from '../components/VeloMobile';
 import RemoteData from "../services/RemoteData";
 import { useOutletContext } from "react-router-dom";
 import FormPostVeloMobile from '../components/FormPostVeloMobile';
-import Header from "../components/Header";
-import FormContact from "../components/FormContact";
 
 /**
  * Composant fonction
@@ -170,7 +168,7 @@ RemoteData.putVeloMobile(updatedVeloMobile)
         <div className="modeles">
           <div>
             {errorMsg}
-            {isLoggedIn &&(
+            {isLoggedIn && (
               <button onClick={handleClickBtnAddVeloMobile}
               className="btn btn-success mb-5" id="add-velomobile">Ajouter un vélomobile</button>
             )}
