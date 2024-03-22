@@ -29,11 +29,13 @@ function App()
 // si non on le laisse afficher
 let url = useLocation();
 let isOnAdminPage = false
-
+let isOnLoginPage =false
 if (url.pathname.includes("admin")) {
    isOnAdminPage =true
 }
-
+if (url.pathname.includes("login")) {
+   isOnLoginPage =true
+}
 return (
 <div className={modeSombre}> 
   <div className='App'>
@@ -46,9 +48,14 @@ return (
       <Outlet context={[isLoggedIn, setIsLoggedIn]} isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>    
     
     {
-      isOnAdminPage ? null : <FormContact/>
+      isOnLoginPage  ? null : <FormContact/> &&
+      isOnAdminPage  ? null : <FormContact/>
+
     }
+    
+
     </main>
+    
      {
       isOnAdminPage ? null : <Footer />
     }

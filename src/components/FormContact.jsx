@@ -73,13 +73,13 @@ const FormContact = () => {
   };
 
   return (
-    <div className="container-form my-5">
+    <div className="container-form py-5">
       <h2 className="fst-italic py-3">
         Envie d'en savoir plus? <br /> Contactez-nous!
       </h2>
       <form
         id="form-contact"
-        className="d-flex flex-column d-inline-flex col-md-3"
+        className="d-flex flex-column d-inline-flex col-md-3 my-5"
         onSubmit={() => {
           if (handleSubmit) {
             //  console.log(`redirection vers la page d'accueil`);

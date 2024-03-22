@@ -3,6 +3,7 @@ import React from "react";
 import { RiHome2Line } from "react-icons/ri";
 import "../App.css";
 import { CiLogout } from "react-icons/ci";
+import FormPostVeloMobile from "./FormPostVeloMobile";
 
 
 function Admin() {
