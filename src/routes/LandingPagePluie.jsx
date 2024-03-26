@@ -14,14 +14,14 @@ const LandingPagePub = () => {
         <div className="container my-4" id="containerDesign">
           
             <h3 className="my-4">Les 5 atouts sous la pluie : </h3>
-            <p><strong>
+            <p>
               Lorsque la pluie menace de compromettre nos déplacements, le
               velomobile se présente comme une solution ingénieuse et efficace.
               Équipé d'une capote protectrice, ce véhicule offre une protection
               supérieure contre les intempéries, offrant ainsi une expérience de
               conduite agréable et sécurisée, même par temps humide. Voici
               pourquoi le velomobile est idéal sous la pluie grâce à sa capote :
-            </strong></p>
+            </p>
           
             <img id="vm1logo" className ="my-4"src={`/images/velosmobiles/capote.jpg`} alt="" />
            
