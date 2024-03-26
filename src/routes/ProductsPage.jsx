@@ -164,8 +164,8 @@ RemoteData.putVeloMobile(updatedVeloMobile)
 
   return (
     <>
-      <h2 className="my-5">Nos modèles</h2>
-        <div className="modeles container">
+      {/* <h2 className="my-5">Nos modèles</h2> */}
+        <div className="modeles container my-5">
           <div>
             {errorMsg}
             {isLoggedIn && (

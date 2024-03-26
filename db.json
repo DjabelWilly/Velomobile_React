@@ -1,12 +1,6 @@
 {
   "velosMobiles": [
-    {
-      "id": "1",
-      "model": "lvf",
-      "description": "Le vélo mobile français qui a fait ses preuves",
-      "weight": "",
-      "photo": "vm1.png"
-    },
+    
     {
       "id": "2",
       "model": "LVF, Redéfinissez votre expérience de cyclisme urbain",
@@ -20,8 +14,14 @@
       "description": "Plongez dans le monde de l'excellence sportive avec le vélomobile LVQ. Conçu pour les passionnés de cyclisme à la recherche de performances optimales, le LVQ offre une combinaison parfaite de vitesse, d'agilité et de style. Sa structure en fibre de carbone ultralégère et sa forme aérodynamique vous permettent de fendre l'air avec une efficacité maximale, tandis que ses composants haut de gamme garantissent une transmission de puissance optimale à chaque coup de pédale. Avec ses roues de haute performance et son système de freinage de pointe, le LVQ offre une expérience de conduite dynamique et sécurisée sur toutes les surfaces.",
       "weight": "32",
       "photo": "vm1.png"
+    },
+    {
+      "id": "4064",
+      "model": "",
+      "description": "",
+      "weight": "",
+      "photo": ""
     }
-    
   ],
   "users": [
     {
