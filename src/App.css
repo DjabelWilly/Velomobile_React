@@ -57,6 +57,7 @@ max-width:80vw;
   width: 100%;
   background-color: #d9d9d9;
   height: 6em;
+  
 }
 #logo {
   width: 27em;
@@ -156,7 +157,7 @@ max-width:80vw;
 
 
 .modeles{
-  display: flex;
+  display: grid;
   flex-direction: row;
 } 
 
@@ -203,3 +204,6 @@ display: grid;
   max-width: 20vw;
 }
 
+#add-velomobile{
+margin-left: 5vw;
+}
