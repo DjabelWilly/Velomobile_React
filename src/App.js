@@ -48,7 +48,7 @@ return (
       <Outlet context={[isLoggedIn, setIsLoggedIn]} isLoggedIn={isLoggedIn} toggleMode={toggleMode} modeSombre={modeSombre}/>    
     
     {
-      isOnLoginPage  ? null : <FormContact/> &&
+      // isOnLoginPage  ? null : <FormContact/> &&
       isOnAdminPage  ? null : <FormContact/>
 
     }

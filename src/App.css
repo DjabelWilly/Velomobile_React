@@ -1,6 +1,7 @@
 .App {
 text-align: center;
 overflow-x: hidden;
+
 }
 
 
@@ -51,12 +52,6 @@ max-width:80vw;
 .App-logo {
   height: 10vmin;
   pointer-events: none;
-}
-
-.wrap-nav {
-  width: 100%;
-  background-color: #d9d9d9;
-  height: 6em;
 }
 #logo {
   width: 27em;
