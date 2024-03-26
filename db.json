@@ -1,12 +1,6 @@
 {
   "velosMobiles": [
-    {
-      "id": "1",
-      "model": "lvf",
-      "description": "Le vélo mobile français qui a fait ses preuves",
-      "weight": "",
-      "photo": "vm1.png"
-    },
+  
     {
       "id": "2",
       "model": "LVF, Redéfinissez votre expérience de cyclisme urbain",
@@ -23,16 +17,11 @@
     }
     
   ],
-  "users": [
+   "users": [
     {
       "id": "1",
       "login": "root",
       "pwd": "root"
-    },
-    {
-      "id": "2",
-      "login": "r",
-      "pwd": "r"
     }
   ]
 }

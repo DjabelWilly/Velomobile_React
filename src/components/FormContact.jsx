@@ -5,6 +5,7 @@ const FormContact = () => {
  const [lastname, setLastname] = useState('');
  const [email, setEmail] = useState('');
  const [message, setMessage] = useState('');
+  const [errorMsg, setErrorMsg] = useState(false);
 
  const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ const FormContact = () => {
 
     if (e.target.name === 'firstname' || e.target.name === 'lastname') {
       if (!nameRegex.test(e.target.value)) {
-        alert('Veuillez entrer un nom valide');
+        setErrorMsg(true);
         return false;
       }
     }
@@ -49,20 +50,7 @@ const FormContact = () => {
       <form
         id="form-contact"
         className="d-flex flex-column d-inline-flex col-md-3 my-5"
-        onSubmit={() => {
-          if (handleSubmit) {
-            //  console.log(`redirection vers la page d'accueil`);
-            setsuccessMsg(false);
-            //  navigate("/");
-          } else setsuccessMsg(true);
-          //  alert("votre message à bien été envoyé");
 
-          //  successMsg && (
-          //    <p className="text-danger h3 align-center">
-          //      votre message à bien été envoyé
-          //    </p>
-          //  );
-        }}
       >
         <label htmlFor="firstname">Prénom</label>
         <input
@@ -105,7 +93,7 @@ const FormContact = () => {
         </button>
       </form>
 
-      {successMsg && (
+      {errorMsg && (
         <p className="text-danger h3 align-center">
           Identifiant et/ou mots de passe erronés. Veuillez resaisir à nouveau
         </p>
