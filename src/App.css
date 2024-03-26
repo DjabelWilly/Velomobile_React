@@ -1,9 +1,7 @@
 .App {
-text-align: center;
-overflow-x: hidden;
-
+  text-align: center;
+  overflow-x: hidden;
 }
-
 
 li {
   list-style: none;
@@ -12,7 +10,12 @@ li {
 
 #vm1 {
   width: 100%;
-  height: auto
+  height: auto;
+}
+
+#vm2 {
+  width: 100%;
+  height: auto;
 }
 
 #vm1logo {
@@ -20,7 +23,7 @@ li {
   height: auto;
   justify-content: center;
 }
- 
+
 #containerDesign {
   display: flex;
   padding-inline: 18vw;
@@ -28,7 +31,7 @@ li {
   justify-content: center;
   text-align: justify;
 }
- 
+
 #containerPluie {
   display: flex;
   padding-inline: 18vw;
@@ -42,16 +45,16 @@ li {
   text-align: justify;
 }
 
-#vm2 {
-  max-width: 50vw;
-}
-
-/* #vm2{
-max-width:80vw;
-} */
 .App-logo {
   height: 10vmin;
   pointer-events: none;
+}
+
+.wrap-nav {
+  width: 100%;
+  background-color: #d9d9d9;
+  height: 6em;
+  
 }
 #logo {
   width: 27em;
@@ -77,8 +80,6 @@ max-width:80vw;
 .container-main {
   max-width: 50%;
 }
-
-
 
 #img-velo-old,
 #img-velo-old2 {
@@ -106,21 +107,12 @@ max-width:80vw;
   margin: 50px;
 }
 
-.image {
+#histoireTexte {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 10px;
-}
-
-#histoireTexte {
-  display: flex; 
- flex-direction: column;
   text-align: justify;
 }
- 
 
- 
 @media screen and (max-width: 767px) {
   .containerhistoire {
     flex-direction: column;
@@ -134,7 +126,6 @@ max-width:80vw;
 }
 
 #containerShowroom {
- 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,15 +142,13 @@ max-width:80vw;
 
 
 .modeles{
-  display: flex;
+  display: grid;
   flex-direction: row;
-} 
+}
 
-.formImage{
-display: grid;
-
-} */
-
+.formImage {
+  display: grid;
+}
 
 #usine {
   max-width: 50vw;
@@ -180,10 +169,8 @@ display: grid;
   justify-content: center;
   margin: 10px;
 }
- 
 
 #containerShowroom {
- 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,3 +185,6 @@ display: grid;
   max-width: 20vw;
 }
 
+#add-velomobile{
+margin-left: 5vw;
+}

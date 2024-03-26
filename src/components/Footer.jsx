@@ -25,8 +25,12 @@ const Footer = () => {
         </div>
         <div className="footer-center">
           <ul>
-            <li><a>Newsletter</a></li>
-            <li><a>Mentions légales</a></li>
+            <li>
+            <Link to="/">Newsletter</Link>
+            </li>
+            <li>
+             <Link to="/"> Mentions légales</Link>
+            </li>
           </ul>
         </div>
         <div className="footer-right">
