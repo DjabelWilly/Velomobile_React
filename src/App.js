@@ -29,6 +29,7 @@ function App()
 // si non on le laisse afficher
 let url = useLocation();
 let isOnAdminPage = false
+  
 
 if (url.pathname.includes("admin")) {
    isOnAdminPage =true
@@ -61,3 +62,6 @@ return (
 };
 
 export default App;
+
+
+

@@ -2,18 +2,19 @@
   "velosMobiles": [
     {
       "id": "2",
-      "model": "lvq",
-      "description": "Le vélo mobile sportif aux performances incroyables",
-      "weight": "89",
+      "model": "LVF, Redéfinissez votre expérience de cyclisme urbain",
+      "description": "Découvrez le LVF, un vélomobile élégant conçu pour les déplacements urbains efficients. Doté d'une structure légère en fibre de carbone et d'une coque profilée, il offre une conduite agile et confortable, tout en protégeant le cycliste des intempéries. Il permet des déplacements fluides et rapides en milieu urbain. Le LVF est également équipé d'un système de freinage hydraulique fiable et d'un espace de stockage pratique pour vos effets personnels. Avec son design moderne et sa fonctionnalité polyvalente, le LVF est le compagnon idéal pour ceux qui recherchent un moyen de transport écologique et stylé en ville.  ",
+      "weight": "40",
       "photo": "vm2.png"
     },
     {
       "id": "8e94",
-      "model": "iui",
-      "description": "ziiui",
-      "weight": "",
+      "model": "LVQ, L'excellence de la performance en action",
+      "description": "Plongez dans le monde de l'excellence sportive avec le vélomobile LVQ. Conçu pour les passionnés de cyclisme à la recherche de performances optimales, le LVQ offre une combinaison parfaite de vitesse, d'agilité et de style. Sa structure en fibre de carbone ultralégère et sa forme aérodynamique vous permettent de fendre l'air avec une efficacité maximale, tandis que ses composants haut de gamme garantissent une transmission de puissance optimale à chaque coup de pédale. Avec ses roues de haute performance et son système de freinage de pointe, le LVQ offre une expérience de conduite dynamique et sécurisée sur toutes les surfaces.",
+      "weight": "32",
       "photo": "vm1.png"
     }
+    
   ],
   "users": [
     {
