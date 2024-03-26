@@ -7,7 +7,7 @@ const LoginPage = () => {
   const [errorMsg, setErrorMsg] = useState(false);
   const navigate = useNavigate();
   return (
-    <section className="container col-7 col-sm-4 col-md-4 col-lg-3">
+    <section className="container col-6 col-sm-6 col-md-4 col-lg-6 my-5 py-5">
       <br />
       <h2>Identification</h2>
 

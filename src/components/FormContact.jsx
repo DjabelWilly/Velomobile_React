@@ -41,50 +41,77 @@ const FormContact = () => {
     return true;
  };
 
- return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="firstname">Prénom</label>
-      <input
-        type="text"
-        id="firstname"
-        name="firstname"
-        value={firstname}
-        onChange={(e) => setFirstname(e.target.value)}
-       
-      />
+  return (
+    <div className="container-form py-5">
+      <h2 className="fst-italic py-3">
+        Envie d'en savoir plus? <br /> Contactez-nous!
+      </h2>
+      <form
+        id="form-contact"
+        className="d-flex flex-column d-inline-flex col-md-3 my-5"
+        onSubmit={() => {
+          if (handleSubmit) {
+            //  console.log(`redirection vers la page d'accueil`);
+            setsuccessMsg(false);
+            //  navigate("/");
+          } else setsuccessMsg(true);
+          //  alert("votre message à bien été envoyé");
 
-      <label htmlFor="lastname">Nom</label>
-      <input
-        type="text"
-        id="lastname"
-        name="lastname"
-        value={lastname}
-        onChange={(e) => setLastname(e.target.value)}
-       
-      />
+          //  successMsg && (
+          //    <p className="text-danger h3 align-center">
+          //      votre message à bien été envoyé
+          //    </p>
+          //  );
+        }}
+      >
+        <label htmlFor="firstname">Prénom</label>
+        <input
+          type="text"
+          id="firstname"
+          value={firstname}
+          onChange={(e) => setFirstname(e.target.value)}
+        />
+        <label htmlFor="lastname">Nom</label>
+        <input
+          type="text"
+          id="lastname"
+          value={lastname}
+          onChange={(e) => setLastname(e.target.value)}
+        />
+        <label htmlFor="email">email</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label htmlFor="message">Votre message</label>
+        <textarea
+          id="message"
+          name=""
+          rows="6"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+        <button
+          className="form-button btn btn-light mx-auto my-3"
+          type="submit"
+          style={{
+            width: "auto",
+            border: "1px solid grey",
+          }}
+        >
+          Envoyer
+        </button>
+      </form>
 
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        
-      />
-
-      <label htmlFor="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        
-      ></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
- );
+      {successMsg && (
+        <p className="text-danger h3 align-center">
+          Identifiant et/ou mots de passe erronés. Veuillez resaisir à nouveau
+        </p>
+      )}
+    </div>
+  );
 };
 
 export default FormContact;

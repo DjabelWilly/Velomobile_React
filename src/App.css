@@ -54,6 +54,7 @@ li {
   width: 100%;
   background-color: #d9d9d9;
   height: 6em;
+  
 }
 #logo {
   width: 27em;
@@ -139,8 +140,9 @@ li {
   max-width: 20vw;
 }
 
-.modeles {
-  display: flex;
+
+.modeles{
+  display: grid;
   flex-direction: row;
 }
 
@@ -183,29 +185,6 @@ li {
   max-width: 20vw;
 }
 
-
-.table-td >p{
-  text-align: justify;
-}
-
-@media (max-width: 800px){
-.table-thead {
-display: none;
-}
-
-.table-tr{
-display: block;
-margin-bottom: 40px;
-}
-
-.table-td {
-display: block;
-}
-
-
-.table-td:before {
-content: attr(data-label);
-float: left;
-font-weight: bold;
-}
+#add-velomobile{
+margin-left: 5vw;
 }

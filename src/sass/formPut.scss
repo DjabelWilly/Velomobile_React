@@ -1,6 +1,6 @@
-fieldset {
+.fieldsetput {
   border: none;
-  background-color: #000583;
+  background-color: #656464;
   border: 2px solid black;
   border-radius: 6px;
   margin-bottom: 20px;
@@ -9,9 +9,9 @@ fieldset {
   
 }
 
-legend {
+.legendput {
   background-color: white;
-  border: 2px solid black;
+  // border: 2px solid black;
   border-radius: 6px;
   padding: 4px;
   color: #D50202;
@@ -19,9 +19,11 @@ legend {
 }
 
 .formPut{
+   
     height: min-content;
-    width: 81vw;
-    padding-left: 66vh;
+    padding-left:  3vh;
+    width: 60vw;
+    // padding-left: 66vh;
     padding-top: 7vh;
     padding-bottom: 7vh;
     color: white;
@@ -30,7 +32,21 @@ legend {
     color: white;
     }
     textarea{
-        height: 30px;
+        height: 10vh;
 
     }
+
+ #retour{
+
+  background-color: #656464;
+  color: #eeeeee;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 4px;
+  max-height: fit-content;
+ 
+
+ }   
+ 
 }
