@@ -7,7 +7,6 @@ import FormPostVeloMobile from "../components/FormPostVeloMobile";
 import { Link } from "react-router-dom";
 // import "../App.css";
 // import React from "react";
-import { RiHome2Line } from "react-icons/ri";
 import { CiLogout } from "react-icons/ci";
 
 

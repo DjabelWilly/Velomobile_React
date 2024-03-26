@@ -2,8 +2,6 @@ import React from "react";
 import "../App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import { IoIosLogIn } from "react-icons/io";
-// import { CiLogout } from "react-icons/ci";
 import logo from "../assets/logovelomobile.png";
 import { IoMoonSharp } from "react-icons/io5";
 import { GoSun } from "react-icons/go";
@@ -73,39 +71,30 @@ const Header = ({ isLoggedIn, modeSombre, toggleMode }) => {
           <li className="navbar-item" onClick={switchMenuBurgerClass}>
             <Link to={`/showroom`}>Showroom</Link>
           </li>
-          <li>
-            {modeSombre === "sombre" ? (
-              <GoSun className="sun-icon" onClick={toggleMode} />
-            ) : (
-              <IoMoonSharp className="moon-icon" onClick={toggleMode} />
-            )}
-          </li>
-          {/* icons login/logout */}
-          <li className="login-out-link" onClick={switchMenuBurgerClass}>
-            <Link to={pathLogged}>
-              {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
-            </Link>
-          </li>
         </ul>
         {/*------------- Liens définis pour la navigation --------*/}
         {/* icons dark mode */}
-        {/* <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-end">
           <ul className="col-3 nav-option d-flex justify-content-center mt-4 mx-2">
             <li>
               {modeSombre === "sombre" ? (
                 <GoSun className="sun-icon" onClick={toggleMode} />
               ) : (
-                <IoMoonSharp className="moon-icon" onClick={toggleMode} />
+                <IoMoonSharp
+                  style={{ fontSize: "20px" }}
+                  className="moon-icon"
+                  onClick={toggleMode}
+                />
               )}
             </li>
             {/* icons login/logout */}
-            {/* <li className="login-out-link" onClick={switchMenuBurgerClass}>
+            <li className="login-out-link" onClick={switchMenuBurgerClass}>
               <Link to={pathLogged}>
                 {isLoggedIn ? logInOutLink(true) : logInOutLink(false)}
               </Link>
             </li>
           </ul>
-        </div> */} 
+        </div>
       </nav>
     </header>
   );
