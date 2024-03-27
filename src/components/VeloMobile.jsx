@@ -6,7 +6,7 @@ const VeloMobile = (props) => {
   return (
     <section className="section-velomobile">
       <div className="adminTitle">
-        <h3 className="h2">Modèle : {props.veloMobile.model}</h3>
+        <h3 className="h2 text-center">Modèle : {props.veloMobile.model}</h3>
       </div>
 
       {/* fonctionnalité pour la page "admin/velo" */}
@@ -32,8 +32,8 @@ const VeloMobile = (props) => {
                 <div className="description-column img-thumbnail col-9 rounded mx-auto d-block">
                   <p>{props.veloMobile.description}</p>
                 </div>
-                <div >
-                  <p>{'Poids : '}{props.veloMobile.weight} {'kg'}</p>
+                <div>
+                  <p className="text-center">{'Poids : '}{props.veloMobile.weight} {'kg'}</p>
                 </div>
               </div>
             </div>
@@ -85,11 +85,12 @@ const VeloMobile = (props) => {
             )}
             {!props.upVeloMobile && (
               <>
+              <div className="text-center">
                 <button 
                   onClick={() => {
                     props.handleClickDeleteVeloMobile(props.veloMobile);
                   }}
-                  className="btn btn-danger mx-2 "
+                  className="btn btn-danger mx-2"
                 >
                   Supprimer
                 </button>
@@ -97,10 +98,11 @@ const VeloMobile = (props) => {
                   onClick={() => {
                     props.handleClickBtnUpdateVeloMobile(props.veloMobile);
                   }}
-                  className="btn btn-warning"
+                  className="btn btn-warning mx-2"
                 >
                   Modifier
                 </button>
+              </div>
               </>
             )}
         </>
