@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   font-family: "Segoe UI";
+
 }
 
 #logo {
@@ -13,6 +14,8 @@
 
 li {
   list-style: none;
+  margin:3vh;
+ 
 }
 
 a {
@@ -29,7 +32,7 @@ a:hover {
 .wrap-nav {
     display: flex;
     flex-direction: column;
-  background-color: #d9d9d9;
+     background-color: #d9d9d9;
       position: fixed;
       z-index: 9999;
       width: 100%;
@@ -138,7 +141,7 @@ a:hover {
           color: #000583 !important;
           justify-content: center;
           align-items: center;
-          font-size: 1.4em;
+          font-size: 1.6em;
         }
 
         a:hover {
@@ -179,16 +182,16 @@ a:hover {
     ul {
       position: fixed;
       z-index: 999;
-      left: -100%;
+      left: -150%;
       flex-direction: column;
-      background: skyblue;
+      background: rgb(172, 172, 172);
       width: 100vw !important;
       height: 100vh !important;
       text-align: center;
       transition: left 1s;
       margin-left: 0 !important;
       padding-left: 0 !important;
-      gap: 5px !important;
+      // gap: 1vh !important;
       padding-bottom: 0px;
       justify-content: center !important;
 
@@ -208,7 +211,7 @@ a:hover {
           color: #000583 !important;
           justify-content: center;
           align-items: center;
-          font-size: 1.4em;
+          font-size: 1.2em;
         }
 
         a:hover {
