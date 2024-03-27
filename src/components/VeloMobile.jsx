@@ -11,68 +11,41 @@ const VeloMobile = (props) => {
 
       {/* fonctionnalité pour la page "admin/velo" */}
 
-      {isLoggedIn && (
+      {!isLoggedIn && (
         <>
           <div className="d-flex justify-content-center">
             <div className="d-flex justify-content-center">
-              <div>Image </div>
+              {/* <div>Image </div>
               <div>Description</div>
-              <div>Poids(kg)</div>
+              <div>Poids(kg)</div> */}
             </div>
 
             <div>
               <div>
-                <div>
-                  <img
+                <div className="img-thumbnail col-9 rounded mx-auto d-block">
+                  <img 
                     id="vm2"
                     src={`/images/velosmobiles/${props.veloMobile.photo}`}
                     alt="foto de velomobile"
                   />
                 </div>
-                <div className="description-column">
+                <div className="description-column img-thumbnail col-9 rounded mx-auto d-block">
                   <p>{props.veloMobile.description}</p>
                 </div>
-                <div>
-                  <p>{props.veloMobile.weight}</p>
+                <div >
+                  <p>{'Poids : '}{props.veloMobile.weight} {'kg'}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {props.upVeloMobile && (
-            <FormPutVeloMobile
-              veloMobile={props.veloMobile}
-              handleSubmitFormPutVeloMobile={
-                props.handleSubmitFormPutVeloMobile
-              }
-            />
-          )}
-          {!props.upVeloMobile && (
-            <>
-              <button
-                onClick={() => {
-                  props.handleClickDeleteVeloMobile(props.veloMobile);
-                }}
-                className="btn btn-danger mx-2"
-              >
-                Supprimer
-              </button>
-              <button
-                onClick={() => {
-                  props.handleClickBtnUpdateVeloMobile(props.veloMobile);
-                }}
-                className="btn btn-warning"
-              >
-                Modifier
-              </button>
-            </>
-          )}
+         
         </>
       )}
 
       {/* fonctionnalité pour la page "Modèles" */}
 
-      {!isLoggedIn && (
+      {isLoggedIn && (
         <>
          
             <table className="table table-striped">
@@ -102,7 +75,34 @@ const VeloMobile = (props) => {
                 </tr>
               </tbody>
             </table>
-          
+           {props.upVeloMobile && (
+            <FormPutVeloMobile
+              veloMobile={props.veloMobile}
+              handleSubmitFormPutVeloMobile={
+                props.handleSubmitFormPutVeloMobile
+              }
+            />
+            )}
+            {!props.upVeloMobile && (
+              <>
+                <button 
+                  onClick={() => {
+                    props.handleClickDeleteVeloMobile(props.veloMobile);
+                  }}
+                  className="btn btn-danger mx-2 "
+                >
+                  Supprimer
+                </button>
+                <button
+                  onClick={() => {
+                    props.handleClickBtnUpdateVeloMobile(props.veloMobile);
+                  }}
+                  className="btn btn-warning"
+                >
+                  Modifier
+                </button>
+              </>
+            )}
         </>
       )}
     </section>

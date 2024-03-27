@@ -5,7 +5,7 @@ const FormPostVeloMobile = ({ handleSubmitFormPostVeloMobile }) => {
   
   return (
     <form
-      className="formPost"
+      className="formPost rounded mx-auto d-block"
       onSubmit={(event) => {
         handleSubmitFormPostVeloMobile(event);
       }}

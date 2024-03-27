@@ -8,7 +8,7 @@ const toogleCheck = () =>{
   setChecked(!checked)
 }
   return (
-    <form className="formPut"
+    <form className="formPut rounded mx-auto d-block"
       onSubmit={(event) => {
         handleSubmitFormPutVeloMobile(event, veloMobile.id)
       }}

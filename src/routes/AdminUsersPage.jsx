@@ -7,46 +7,16 @@ import { RiHome2Line } from "react-icons/ri";
 const AdminUsersPage = () => {
     return (
       <>
-          <div className="col align-items-center mx-3 py-5">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">id</th>
-                  <th scope="col">Nom</th>
-                  <th scope="col">prenom</th>
-                  <th scope="col">email</th>
-                  <th scope="col">roles</th>
-                  <th scope="col">mdp</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row"> </th>
-                  <td> </td>
-                  <td> </td>
-                  <td> </td>
-                  <td> </td>
-                  <div className="d-flex justify-content-end">
-                    <button className="btn btn-primary mx-2">Modifier</button>
-    {/* {isLoggedIn && (
-                <FormPostVeloMobile handleSubmitFormPostVeloMobile={handleSubmitFormPostVeloMobile} />
-              )}
-              {errorMsg && (
-                <h3 className="text-danger">{errorMsg}</h3>
-              )} */}
+          <div className="col-9 text-center fs-3">
+            <p>Nous sommes ravis de vous informer que nous travaillons actuellement sur une toute nouvelle page qui ajoutera encore plus de valeur à votre expérience sur notre site web. Notre équipe met tout en œuvre pour finaliser cette page dans les plus brefs délais.<br/>
 
-                    <button className="btn btn-danger">Supprimer</button>
-                  </div>
-                </tr>
-              </tbody>
-            </table>
-            <div className="d-flex justify-content-end">
-              <Link to={"/users/form"}>
-                <button className="btn btn-secondary my-5 mx-2">
-                  Ajouter utilisateur
-                </button>
-              </Link>
-            </div>
+                Pendant cette période de construction, nous vous remercions de votre patience et de votre compréhension. Nous sommes impatients de vous présenter notre dernière création !<br/>
+
+                Restez à l'écoute pour plus de mises à jour. En attendant, n'hésitez pas à explorer les autres sections de notre site pour découvrir tout ce que nous avons à offrir.<br/>
+
+                Merci de votre soutien continu !<br/>
+
+                L'équipe LesWébebous / Vélomobile</p> 
           </div>
       </>
     );
