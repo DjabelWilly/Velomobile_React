@@ -50,11 +50,11 @@ const FormContact = () => {
         id="form-contact"
         className="d-flex flex-column d-inline-flex col-md-3 my-5"
         onSubmit={() => {
-          if (handleSubmit) {
-            //  console.log(`redirection vers la page d'accueil`);
-            setsuccessMsg(false);
-            //  navigate("/");
-          } else setsuccessMsg(true);
+          // if (handleSubmit) {
+          //   //  console.log(`redirection vers la page d'accueil`);
+          //   setsuccessMsg(false);
+          //   //  navigate("/");
+          // } else setsuccessMsg(true);
           //  alert("votre message à bien été envoyé");
 
           //  successMsg && (
@@ -105,11 +105,11 @@ const FormContact = () => {
         </button>
       </form>
 
-      {successMsg && (
+      {/* {successMsg && (
         <p className="text-danger h3 align-center">
           Identifiant et/ou mots de passe erronés. Veuillez resaisir à nouveau
         </p>
-      )}
+      )} */}
     </div>
   );
 };
