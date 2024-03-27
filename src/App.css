@@ -1,7 +1,18 @@
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+
+}
+
 .App {
   text-align: center;
   /* overflow: hidden; */
-  
+}
+
+#titre{
+  margin-top: 8rem;
+
 }
 
 li {

@@ -5,6 +5,7 @@ const FormContact = () => {
  const [lastname, setLastname] = useState('');
  const [email, setEmail] = useState('');
  const [message, setMessage] = useState('');
+  const [errorMsg, setErrorMsg] = useState(false);
 
  const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ const FormContact = () => {
 
     if (e.target.name === 'firstname' || e.target.name === 'lastname') {
       if (!nameRegex.test(e.target.value)) {
-        alert('Veuillez entrer un nom valide');
+        setErrorMsg(true);
         return false;
       }
     }

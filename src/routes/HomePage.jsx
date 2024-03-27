@@ -17,7 +17,7 @@ const HomePage = ({toggleMode,modeSombre}) => {
       <div className= "container col-10">
         <br />
       
-        <h1 className=" d-flex justify-content-center mt-4">
+        <h1 className="d-flex justify-content-center" id="titre">
           Le Velomobile Français
         </h1>
         <br />

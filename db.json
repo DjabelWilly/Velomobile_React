@@ -15,7 +15,7 @@
       "photo": "vm1.png"
     },
     {
-      "id": "4064",
+      "id": "790e",
       "model": "",
       "description": "",
       "weight": "",
@@ -27,11 +27,6 @@
       "id": "1",
       "login": "root",
       "pwd": "root"
-    },
-    {
-      "id": "2",
-      "login": "r",
-      "pwd": "r"
     }
   ]
 }
